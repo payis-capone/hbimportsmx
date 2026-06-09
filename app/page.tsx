@@ -479,8 +479,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   alt="DNA Vineyards Mendocino Lifestyle"
                 />
                 <img
-                  className="w-full h-full object-contain object-right opacity-90 transition-transform duration-1000 group-hover:scale-105 relative z-10 mix-blend-multiply"
-                  src="/images/dna_vineyards_bg.png"
+                  className="absolute bottom-0 right-[-10%] w-[80%] h-[95%] object-contain object-bottom transition-transform duration-1000 group-hover:scale-105 z-10 drop-shadow-2xl"
+                  src="/images/dna_cabernet_sauvignon.webp"
                   alt="DNA Vineyards Cabernet Sauvignon Bottle"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent p-10 flex flex-col justify-end">
