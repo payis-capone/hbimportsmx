@@ -461,9 +461,9 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   src="/images/12-linajes-ig.jpg"
                   alt="12 Linajes Hispano Bodegas Instagram Photo"
                 />
-                <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/95 via-black/80 to-transparent p-12 flex flex-col justify-center pointer-events-none">
+                <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/95 via-black/80 to-transparent p-6 md:p-12 flex flex-col justify-center pointer-events-none">
                   <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b2Country}</span>
-                  <h3 className="text-white font-headline font-bold text-5xl mb-4 group-hover:text-primary transition-colors" style={{ textShadow: '0px 4px 16px rgba(0,0,0,0.9)' }}>{t.brands.b2Brand}</h3>
+                  <h3 className="text-white font-headline font-bold text-4xl md:text-5xl mb-4 group-hover:text-primary transition-colors leading-tight break-words" style={{ textShadow: '0px 4px 16px rgba(0,0,0,0.9)' }}>{t.brands.b2Brand}</h3>
                   {t.brands.b2Desc && <p className="text-white/80 max-w-sm leading-relaxed text-lg italic opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">{t.brands.b2Desc}</p>}
                 </div>
               </a>
