@@ -464,7 +464,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/95 via-black/80 to-transparent p-12 flex flex-col justify-center pointer-events-none">
                   <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b2Country}</span>
                   <h3 className="text-white font-headline font-bold text-5xl mb-4 group-hover:text-primary transition-colors" style={{ textShadow: '0px 4px 16px rgba(0,0,0,0.9)' }}>{t.brands.b2Brand}</h3>
-                  <p className="text-white/80 max-w-sm leading-relaxed text-lg italic opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">{t.brands.b2Desc}</p>
+                  {t.brands.b2Desc && <p className="text-white/80 max-w-sm leading-relaxed text-lg italic opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">{t.brands.b2Desc}</p>}
                 </div>
               </a>
 
@@ -516,7 +516,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent p-10 flex flex-col justify-end">
                   <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b1Country}</span>
                   <h3 className="text-white font-headline font-bold text-3xl mb-2 flex items-center gap-2 group-hover:text-primary transition-colors">{t.brands.b1Brand}</h3>
-                  <p className="text-white/80 max-w-md text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">{t.brands.b1Desc}</p>
+                  {t.brands.b1Desc && <p className="text-white/80 max-w-md text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">{t.brands.b1Desc}</p>}
                 </div>
               </a>
             </div>
