@@ -469,23 +469,23 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
               </a>
 
               {/* Brand 3: DNA Vineyards */}
-              <a href={t.brands.b3Link} target="_blank" rel="noopener noreferrer" className="md:col-span-4 group relative h-[400px] md:h-[480px] overflow-hidden bg-[#0a0a0a] editorial-shadow block rounded-3xl shadow-2xl shadow-black/20 border border-black/5">
+              <a href={t.brands.b3Link} target="_blank" rel="noopener noreferrer" className="md:col-span-4 group relative h-[400px] md:h-[480px] overflow-hidden bg-[#f4f1eb] editorial-shadow block rounded-3xl shadow-2xl shadow-black/20 border border-black/5">
                 <div className="absolute top-6 right-6 w-8 h-6 rounded-sm shadow-xl border border-black/10 overflow-hidden z-20">
                   <img src={getFlagUrl('USA')} alt="USA" className="w-full h-full object-cover opacity-90" />
                 </div>
                 <img
-                  className="absolute left-0 top-0 w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-105"
+                  className="absolute left-0 top-0 w-full h-full object-cover opacity-40 mix-blend-luminosity transition-transform duration-1000 group-hover:scale-105"
                   src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
                   alt="DNA Vineyards Mendocino Lifestyle"
                 />
                 <img
-                  className="absolute bottom-0 right-[-10%] w-[80%] h-[95%] object-contain object-bottom transition-transform duration-1000 group-hover:scale-105 z-10 drop-shadow-2xl"
+                  className="absolute bottom-0 right-[-5%] w-[75%] h-[95%] object-contain object-bottom transition-transform duration-1000 group-hover:scale-105 z-10 mix-blend-multiply"
                   src="/images/dna_cabernet_sauvignon.webp"
                   alt="DNA Vineyards Cabernet Sauvignon Bottle"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent p-10 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#f4f1eb] via-[#f4f1eb]/60 to-transparent p-10 flex flex-col justify-end z-20">
                   <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b3Country}</span>
-                  <h3 className="text-white font-headline font-bold text-3xl group-hover:text-primary transition-colors">{t.brands.b3Brand}</h3>
+                  <h3 className="text-secondary font-headline font-bold text-3xl group-hover:text-primary transition-colors">{t.brands.b3Brand}</h3>
                 </div>
               </a>
 
