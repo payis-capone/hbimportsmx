@@ -337,7 +337,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                     }
                   }}
                   placeholder="BUSCAR..." 
-                  className="absolute right-12 w-48 md:w-64 bg-white border border-gray-200 rounded-full px-4 py-2 text-[10px] font-bold font-label tracking-[0.2em] uppercase text-secondary focus:outline-none focus:border-primary shadow-lg"
+                  className="absolute right-12 w-48 md:w-64 bg-white border border-gray-200 rounded-full px-4 py-2 text-[16px] md:text-[10px] font-bold font-label tracking-[0.2em] uppercase text-secondary focus:outline-none focus:border-primary shadow-lg"
                 />
               )}
               <button 
