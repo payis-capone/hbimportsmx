@@ -12,7 +12,7 @@ export const translations = {
       title: "Trayendo vinos del mundo a México.",
       subtitle: "Desde los históricos terruños de España hasta las vanguardistas fincas de California, acortamos la distancia entre orígenes legendarios y tu negocio.",
       btnCatalog: "Explorar Catálogo",
-      btnBrands: "Acceder a Recursos",
+      btnBrands: "Nuestras Marcas",
     },
     brands: {
       title: "Nuestras Marcas",
@@ -158,7 +158,7 @@ export const translations = {
       title: "Bringing world-class wines to Mexico.",
       subtitle: "From the historic terroirs of Spain to the cutting-edge estates of California, we bridge the distance between legendary origins and your business.",
       btnCatalog: "Explore Catalog",
-      btnBrands: "Access Resources",
+      btnBrands: "Our Brands",
     },
     brands: {
       title: "Our Brands",
