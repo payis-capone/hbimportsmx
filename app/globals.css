@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #B21F24;
+  --color-on-primary: #ffffff;
+  --color-secondary: #1c1c1c;
+  --color-on-secondary: #ffffff;
+  --color-background: #fcf9f4;
+  --color-surface: #fcf9f4;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #564242;
+  --color-surface-container-highest: #e5e2dd;
+  --color-surface-container-high: #ebe8e3;
+  --color-surface-container: #f0ede8;
+  --color-surface-container-low: #f6f3ee;
+  --color-outline: #897171;
+  --color-primary-container: #B21F24;
+  --color-on-primary-container: #ffffff;
+  --color-secondary-container: #1c1c1c;
+  --color-on-secondary-container: #ffffff;
+
+  --radius-DEFAULT: 0px;
+  --radius-sm: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 9999px;
+
+  --font-headline: var(--font-noto-serif), serif;
+  --font-body: var(--font-manrope), sans-serif;
+  --font-label: var(--font-manrope), sans-serif;
+  --font-nav: var(--font-mulish), sans-serif;
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(178, 31, 36, 0.6));
+  }
+  .editorial-shadow {
+    box-shadow: 0 20px 40px rgba(28, 28, 25, 0.06);
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(178, 31, 36, 0.3);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(178, 31, 36, 0.7);
+  }
+}
+

@@ -1,0 +1,41 @@
+<svg viewBox="0 0 450 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&amp;family=Manrope:wght@300;400;600&amp;display=swap');
+      .hb-part {
+        font-family: 'Noto Serif', serif;
+        font-weight: 700;
+        font-size: 80px;
+        fill: #B21F24;
+      }
+      .imports {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 300;
+        font-size: 70px;
+        fill: #1c1c1c;
+      }
+      .mexico {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        fill: #1c1c1c;
+        letter-spacing: 0.35em;
+      }
+      .line {
+        stroke: #1c1c1c;
+        stroke-width: 0.8;
+      }
+    </style>
+  </defs>
+  
+  <!-- Red "HB" Text -->
+  <text x="30" y="100" class="hb-part" letter-spacing="-5px">HB</text>
+  
+  <!-- Black "IMPORTS" Text -->
+  <text x="160" y="100" class="imports">IMPORTS</text>
+  
+  <!-- Lines with "MEXICO" -->
+  <line x1="85" y1="125" x2="185" y2="125" class="line" />
+  <text x="200" y="130" class="mexico">MÉXICO</text>
+  <line x1="300" y1="125" x2="400" y2="125" class="line" />
+</svg>

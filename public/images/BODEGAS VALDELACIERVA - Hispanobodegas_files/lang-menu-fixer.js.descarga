@@ -1,0 +1,17 @@
+jQuery( function( $ ) {
+
+    function fixLangMenuTitles(){
+        var items = $('li.lang-item');
+
+        for(var i=0;i<items.length;i++){
+
+          var item = $(items[i]);
+          var linkRef = item.find("a");
+          var imgRef = item.find("img");
+
+          linkRef.attr("title",imgRef.attr("title"));
+        }
+    }
+
+    fixLangMenuTitles();
+});

@@ -1,0 +1,738 @@
+[
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ALTA MALBEC 6/750ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-alta-reserva-malbec-6-750ml?_pos=1&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PascualTosoAltamalbec500x500px_1_1200x1200.jpg?v=1750529093",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO ALTA-MALBEC-2021.pdf",
+    "techsheets": [
+      "/fichas/FT-PASCUAL%20TOSO%20ALTA-MALBEC-2021.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "DNA CABERNET SAUVIGNON 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/dna-cabernet-sauvignon-750-ml?_pos=2&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTDNADRYCREEKCABERNETSAUVIGNON_1200x1200.png?v=1744845733",
+    "techsheet": "/techsheets/2018 Cabernet Sauvignon Dry Creek DNA Vineyards.pdf",
+    "techsheets": [
+      "/fichas/2018%20Cabernet%20Sauvignon%20Dry%20Creek%20DNA%20Vineyards.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "LAPIS LUNA CABERNET SAUVIGNON 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/lapis-luna-cabernet-sauvignon-750-ml?_pos=3&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTLAPISLUNACABERNETSAUVIGNON_1_1200x1200.jpg?v=1744844822",
+    "techsheet": "/techsheets/Lapis Luna Cabernet Sauvignon 2022 (esp).pdf",
+    "techsheets": [
+      "/fichas/Lapis%20Luna%20Cabernet%20Sauvignon%202022%20(esp).pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "DON APARO BRUT 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/don-aparo-brut-750-ml?_pos=4&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/DonAparoBrut500x500px_1200x1200.jpg?v=1753740521",
+    "techsheet": "/techsheets/DON APARO BRUT.pdf",
+    "techsheets": [
+      "/fichas/DON%20APARO%20BRUT.pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "LAPIS LUNA RED BLEND 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/lapis-luna-red-blend-750-ml?_pos=5&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTLAPISLUNAREDBLEND_1_1200x1200.png?v=1744844648",
+    "techsheet": "/techsheets/Lapis Luna Red Blend 2021 (esp).pdf",
+    "techsheets": [
+      "/fichas/Lapis%20Luna%20Red%20Blend%202021%20(esp).pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VALDELAMILLO RESERVA 750ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/vt-valdelamillo-reserva-12-750-ml?_pos=6&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/80210216141022_1200x1200.webp?v=1683740982",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "DON APARO RED BLEND 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/don-aparo-red-blend-750-ml?_pos=7&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/DONAPAROREDBLEND500x500px_1200x1200.jpg?v=1750526704",
+    "techsheet": "/techsheets/DON APARO RED BLEND 2024.pdf",
+    "techsheets": [
+      "/fichas/DON%20APARO%20RED%20BLEND%202024.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "DNA CORO MENDOCINO 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/dna-coro-mendocino-750-ml?_pos=8&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTDNACOROMENDOCINO_1200x1200.png?v=1744845927",
+    "techsheet": "/techsheets/2018 Coro Medocino DNA Vineyards.pdf",
+    "techsheets": [
+      "/techsheets/2018 Coro Medocino DNA Vineyards.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "LAPIS LUNA CHARDONNAY 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/lapis-luna-chardonnay-750-ml?_pos=9&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VBLAPISLUNACHARDONNAY_1_1200x1200.webp?v=1744844965",
+    "techsheet": "/techsheets/Lapis Luna Chardonnay 2023 (esp).pdf",
+    "techsheets": [
+      "/fichas/Lapis%20Luna%20Chardonnay%202023%20(esp).pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ALTA CABERNET FRANC 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-alta-reserva-cabernet-franc-750-ml?_pos=10&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PascualTosoAltaCabernetfranc500x500px_1200x1200.jpg?v=1750529518",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO ALTA-CAB FRANC-2024.pdf",
+    "techsheets": [
+      "/techsheets/FT-PASCUAL TOSO ALTA-CAB FRANC-2024.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO RESERVA CABERNET FRANC 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-reserve-cabernet-franc-750-ml?_pos=11&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PASCUALTOSORVACABFRANC500x500px_1200x1200.jpg?v=1750533202",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO RESERVA-CABERNET FRANC-2024.pdf",
+    "techsheets": [
+      "/fichas/FT-PASCUAL%20TOSO%20RESERVA-CABERNET%20FRANC-2024.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO RESERVA CHARDONNAY 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-reserve-chardonnay-750-ml?_pos=12&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PASCUALTOSORVACHARDONNAY500x500px_1200x1200.jpg?v=1750533041",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO RESERVA-CHARDONNAY-2024.pdf",
+    "techsheets": [
+      "/fichas/FT-PASCUAL%20TOSO%20RESERVA-CHARDONNAY-2024.pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "LAPIS LUNA ZINFANDEL 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/lapis-luna-zinfandel-750-ml?_pos=13&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTLAPISLUNAZINFANDEL_1_1200x1200.png?v=1744845173",
+    "techsheet": "/techsheets/Lapis Luna Zinfandel 2020 (esp).pdf",
+    "techsheets": [
+      "/fichas/Lapis%20Luna%20Zinfandel%202020%20(esp).pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "DON APARO TORRONTES 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/don-aparo-torrontes-750-ml?_pos=14&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/DonAparoTorrontes500x500px_1200x1200.jpg?v=1750526315",
+    "techsheet": "/techsheets/DON APARO TORRONTES 2024.pdf",
+    "techsheets": [
+      "/fichas/DON%20APARO%20TORRONTES%202024.pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VALDELACIERVA MONTEPEDRIZA 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/valdelacierva-montepedriza-750-ml?_pos=15&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VALDELACIERVAMONTEPEDRIZA1_1200x1200.webp?v=1746648565",
+    "techsheet": "/techsheets/Ficha-comercial-Valdelacierva-Montepedriza-2019.pdf",
+    "techsheets": [
+      "/fichas/Ficha-comercial-Valdelacierva-Montepedriza-2019.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "DNA PINOT NOIR 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/dna-pinot-noir-750-ml?_pos=16&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTDNARUSSIANPINOTNOIR_1200x1200.png?v=1744845535",
+    "techsheet": "/techsheets/2022 Pinot Noir Russian River Valley DNA Vineyards.pdf",
+    "techsheets": [
+      "/fichas/2022%20Pinot%20Noir%20Russian%20River%20Valley%20DNA%20Vineyards.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "LAPIS LUNA SAUVIGNON BLANC 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/lapis-luna-sauvignon-blanc-750-ml?_pos=17&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VBLAPISLUNASAUVIGNONBLANC_1_1200x1200.jpg?v=1744844470",
+    "techsheet": "/techsheets/Lapis Luna Sauvignon Blanc 2022 (esp).pdf",
+    "techsheets": [
+      "/fichas/Lapis%20Luna%20Sauvignon%20Blanc%202022%20(esp).pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ALTA CHARDONNAY 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-alta-reserva-chardonnay-750-ml?_pos=18&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PascualTosoAltaChardonnay500x500px_1_1200x1200.jpg?v=1750529270",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO ALTA-CHARDONNAY-2024.pdf",
+    "techsheets": [
+      "/fichas/FT-PASCUAL%20TOSO%20ALTA-CHARDONNAY-2024.pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "MEX",
+    "country": "México",
+    "name": "DECIMA CABERNET - MERLOT 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/decima-cabernet-merlot",
+    "img": "http://lacubiella.com/cdn/shop/files/7500462161569_1200x1200.webp?v=1683747431",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "MEX",
+    "country": "México",
+    "name": "DECIMA SAUVIGNON BLANC 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/7500464036940",
+    "img": "/images/decima_blanco.jpg",
+    "techsheets": [],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ESTATE CHARDONNAY 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-estate-chardonnay-750-ml?_pos=19&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PascualtosoEChardonnay500x500px_1200x1200.jpg?v=1750528197",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO ESTATE-CHARDONNAY 2024 (1).pdf",
+    "techsheets": [
+      "/fichas/FT-PASCUAL%20TOSO%20ESTATE-CHARDONNAY%202024%20(1).pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "DON APARO ROSE BLEND 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/don-aparo-rose-blend-750-ml?_pos=20&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/DonAparoRoseBlend500x500px_1200x1200.jpg?v=1750526509",
+    "techsheet": "/techsheets/DON APARO ROSE BLEND 2024.pdf",
+    "techsheets": [
+      "/fichas/DON%20APARO%20ROSE%20BLEND%202024.pdf"
+    ],
+    "type": "Vino Rosado"
+  },
+  {
+    "badge": "USA",
+    "country": "California",
+    "name": "LAPIS LUNA PINOT NOIR 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/lapis-luna-pinot-noir-750-ml?_pos=21&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTLAPISLUNAPINOTNOIR_1_1200x1200.png?v=1744845365",
+    "techsheet": "/techsheets/Lapis Luna Pinot Noir 2023 (esp).pdf",
+    "techsheets": [
+      "/fichas/Lapis%20Luna%20Pinot%20Noir%202023%20(esp).pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "DON APARO MALBEC 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/don-aparo-malbec-750-ml?_pos=22&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/DonAparoMalbec500x500px_1200x1200.jpg?v=1750526875",
+    "techsheet": "/techsheets/DON APARO MALBEC 2024.pdf",
+    "techsheets": [
+      "/fichas/DON%20APARO%20MALBEC%202024.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VIRNA (Dominio del Challao) 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/virna-dominio-del-challao-750-ml?_pos=23&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTVIRNA_1200x1200.jpg?v=1775587148",
+    "techsheet": "/techsheets/Dominio del Challao FT Virna 2022 ESP.pdf",
+    "techsheets": [
+      "/techsheets/Dominio del Challao FT Virna 2022 ESP.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "ANGELITA (Dominio del Challao) 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/vt-angelita-dominio-del-challao-750-ml?_pos=24&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VTANGELITA_1200x1200.jpg?v=1775586775",
+    "techsheet": "/techsheets/Dominio del Challao Angelita del Challao 2021  ficha técnica ES_compressed.pdf",
+    "techsheets": [
+      "/techsheets/Dominio del Challao Angelita del Challao 2021  ficha técnica ES_compressed.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO RESERVA CABERNET SAUVIGNON 12/750",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-reserve-cabernet-sauvignon-12-750?_pos=25&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PASCUALTOSORVACABSAUV500x500px_1_1200x1200.jpg?v=1750528854",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO RESERVA-CABERNET SAUVIGNON-2021(1).pdf",
+    "techsheets": [
+      "/techsheets/FT-PASCUAL TOSO RESERVA-CABERNET SAUVIGNON-2021(1).pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ESTATE SAUVIGNON BLANC 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-estate-sauvignon-blanc-750-ml?_pos=26&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PascualTosoEstateSauvBlanc_1200x1200.jpg?v=1750528642",
+    "techsheets": [],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "DON APARO WHITE BLEND 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/don-aparo-white-blend-750-ml?_pos=27&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/DonAparowhiteblend500x500px_1200x1200.jpg?v=1750526076",
+    "techsheet": "/techsheets/DON APARO WHITE BLEND 2024.pdf",
+    "techsheets": [
+      "/fichas/DON%20APARO%20WHITE%20BLEND%202024.pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VALDELACIERVA ROSADO 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/valdelacierva-rosado-750-ml?_pos=28&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VALDELACIERVAROSADO_1200x1200.jpg?v=1734119282",
+    "techsheets": [],
+    "type": "Vino Rosado"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO FINCA PEDREGAL",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-finca-pedregal?_pos=29&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/pascualtosofincapedregal_1_1200x1200.png?v=1754509248",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ESTATE CABERNET SAUVIGNON 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-estate-cabernet-sauvignon-750-ml?_pos=30&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/PascualtosoECabSauv500x500px_1_1200x1200.jpg?v=1750528422",
+    "techsheet": "/techsheets/FT-PASCUAL TOSO ESTATE-CABERNET SAUVIGNON 2024.pdf",
+    "techsheets": [
+      "/fichas/FT-PASCUAL%20TOSO%20ESTATE-CABERNET%20SAUVIGNON%202023.pdf",
+      "/fichas/FT-PASCUAL%20TOSO%20ESTATE-CABERNET%20SAUVIGNON%202024.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VALDELACIERVA CANTOGORDO 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/valdelacierva-cantogordo-750-ml?_pos=31&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/VALDELACIERVACANTOGORDO_1200x1200.png?v=1746648115",
+    "techsheet": "/techsheets/Ficha-comercial-Valdelacierva-Cantogordo-2018-DF.pdf",
+    "techsheets": [
+      "/fichas/Ficha-comercial-Valdelacierva-Cantogordo-2018-DF.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO MAGDALENA TOSO 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/pascual-toso-magdalena-toso-750-ml?_pos=32&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/MagdalenaToso500x500px_1200x1200.jpg?v=1753739462",
+    "techsheet": "/techsheets/FT MAGDALENA TOSO 2021 - ESP.pdf",
+    "techsheets": [
+      "/techsheets/FT MAGDALENA TOSO 2021 - ESP.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VT 12 LINAJES ROBLE 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/vt-12-linajes-roble-750-ml?_pos=33&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/12linajesrobles_1_1200x1200.jpg?v=1724691913",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VALDELACIERVA RESERVA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8437002574031?_pos=34&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8437002574031_1200x1200.png?v=1643658625",
+    "techsheet": "/techsheets/Valdelacierva reserva Rioja 2016.pdf",
+    "techsheets": [
+      "/fichas/Valdelacierva%20reserva%20Rioja%202016.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VALDELACIERVA CRIANZA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8437002574406?_pos=35&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8437002574406_1200x1200.jpg?v=1672955865",
+    "techsheet": "/techsheets/Ficha-comercial-Valdelacierva-Crianza-2019 DF.pdf",
+    "techsheets": [
+      "/fichas/Ficha-comercial-Valdelacierva-Crianza-2019%20DF.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "GARCIGRANDE VERDEJO 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8424540999006?_pos=36&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8424540999006_1200x1200.png?v=1626375257",
+    "techsheet": "/techsheets/Ficha Garcigrande Verdejo 2022.pdf",
+    "techsheets": [
+      "/fichas/Ficha%20Garcigrande%20Verdejo%202022.pdf"
+    ],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "CATANIA CRIANZA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8420919101834?_pos=37&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8420919101834_1200x1200.jpg?v=1672955809",
+    "techsheets": [
+      "/fichas/Ficha%20comercial%20Catania%20Crianza%202020.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "CAMPO ALTO RESERVA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/campo-alto-reserva?_pos=38&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/files/CAMPO-ALTO-RESERVA-2_1_1200x1200.jpg?v=1686858803",
+    "techsheets": [
+      "/fichas/Ficha%20Comercial%20Campo%20Alto%20Reserva%202015%20DF.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VALDELAMILLO CRIANZA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/80210214161022?_pos=39&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/80210214161022_ba707d37-7b26-4003-b707-091d99d3e875_1200x1200.png?v=1626374503",
+    "techsheets": [
+      "/fichas/Fciha%20Comercial%20Valdelamillo%20Crianza%202017%20DF.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "IMPAR VS (ALFAR) 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8437002574383?_pos=40&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8437002574383_6687a007-a086-4802-8fe7-ab5bf70ec2bf_1200x1200.png?v=1626374718",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "CAMPO ALTO JOVEN 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8420919101582?_pos=41&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8420919101582_d06d1e40-375e-4a2e-9e53-e485ac0a79c5_1200x1200.png?v=1626374635",
+    "techsheet": "/techsheets/Ficha comercial Campo Alto Joven 2023.pdf",
+    "techsheets": [
+      "/fichas/Ficha%20comercial%20Campo%20Alto%20Joven%202023.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "CAMPO ALTO CRIANZA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8420919101605?_pos=42&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8420919101605_78abf4d6-38d0-42f6-ba62-c5c83d143ea9_1200x1200.png?v=1626374636",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "VIÑA GORMAZ 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8429414129916?_pos=43&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8429414129916_1200x1200.jpg?v=1672955827",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "12 LINAJES RESERVA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8429414222006?_pos=44&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8429414222006_1200x1200.jpg?v=1670450096",
+    "techsheets": [
+      "/fichas/Ficha%20Comercial%2012%20linajes%20Reserva%202016%20DF.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "12 LINAJES CRIANZA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8429414216005?_pos=45&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8429414216005_1200x1200.jpg?v=1672955850",
+    "techsheets": [
+      "/fichas/Ficha%20t%C3%A9cnica%2012%20Linajes%20crianza%202018.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PRIMERA PIEDRA SAUVIGNON BLANC 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/7808725404409?_pos=46&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/7808725404409_1200x1200.png?v=1644437462",
+    "techsheets": [],
+    "type": "Vino Blanco"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "CATANIA JOVEN 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8420919101889?_pos=47&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8420919101889_1200x1200.png?v=1626374640",
+    "techsheets": [
+      "/fichas/Ficha%20comercial%20Catania%20Joven%202019%20DF.pdf"
+    ],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "IMPAR (Alfar) RESERVA 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8437002574352?_pos=48&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8437002574352_c3072ec4-656a-4879-9381-d3eb66d055ce_1200x1200.png?v=1626374714",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "CUSPIDE JOVEN 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/cuspide-joven?_pos=51&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/80710110171022_771bd72c-21b8-4a5b-89e7-b68b3c2af926_1200x1200.png?v=1622142428",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ESP",
+    "country": "España",
+    "name": "ANIER VS 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/8429414765305?_pos=52&_sid=aaba92eb6&_ss=r",
+    "img": "http://lacubiella.com/cdn/shop/products/8429414765305_be5a21ed-619a-416d-ac99-0446835ec8fe_1200x1200.png?v=1626374686",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "MEX",
+    "country": "Sonora",
+    "name": "BACANORA AGUAMIEL ANIVERSARIO FERNANDO ROBLES 750ml",
+    "desc": "Excelente representante de su destilación y región.",
+    "link": "https://lacubiella.com/products/bacanora-aguamiel-aniversario-fernando-robles",
+    "img": "https://lacubiella.com/cdn/shop/files/AguamielAn.1_1200x1200.webp?v=1683747450",
+    "techsheets": [],
+    "type": "Bacanora"
+  },
+  {
+    "badge": "MEX",
+    "country": "Sonora",
+    "name": "CREMA DE BACANORA AGUAMIEL 750 ML",
+    "desc": "Excelente representante de su destilación y región.",
+    "link": "https://lacubiella.com/products/crema-de-bacanora-aguamiel-750-ml",
+    "img": "https://lacubiella.com/cdn/shop/files/CremadeBacanoraEN750ml500x500_1200x1200.jpg?v=1762297746",
+    "techsheets": [],
+    "type": "Bacanora"
+  },
+  {
+    "badge": "MEX",
+    "country": "Sonora",
+    "name": "BACANORA AGUAMIEL BLANCO 750ml",
+    "desc": "Excelente representante de su destilación y región.",
+    "link": "https://lacubiella.com/products/bacanora-aguamiel-blanco-1",
+    "img": "https://lacubiella.com/cdn/shop/files/7500462161538_1200x1200.webp?v=1683748474",
+    "techsheets": [],
+    "type": "Bacanora"
+  },
+  {
+    "badge": "MEX",
+    "country": "Sonora",
+    "name": "BACANORA AGUAMIEL BLANCO 250ml",
+    "desc": "Excelente representante de su destilación y región.",
+    "link": "https://lacubiella.com/products/7503035162048",
+    "img": "https://lacubiella.com/cdn/shop/products/7503035162048-2_1200x1200.jpg?v=1670544577",
+    "techsheets": [],
+    "type": "Bacanora"
+  },
+  {
+    "badge": "MEX",
+    "country": "Baja California",
+    "name": "DÉCIMA EDICIÓN LIMITADA 60 VENDIMIAS CAMILO MAGONI BLEND 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/decima-edicion-limitada",
+    "img": "https://lacubiella.com/cdn/shop/files/decimaEdcamilloMagoni500x500px_jpg_1200x1200.jpg?v=1775942968",
+    "techsheets": [],
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "EL SECRETO MALBEC MEVUSHAL",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "#",
+    "img": "/images/el_secreto_malbec.jpg",
+    "techsheets": [
+      "/fichas/FT%20El%20Secreto%20Malbec%20Mevushal.pdf",
+      "/fichas/FT%20El%20Secreto%20Malbec%20No%20Mevushal%20.pdf",
+      "/fichas/FT%20El%20Secreto%20Malbec%20Reserva%20Mevushal%20%20.pdf",
+      "/fichas/FT%20El%20Secreto%20Reserva%20Malbec%20No%20Mevushal%20.pdf"
+    ],
+    "techsheet": "/fichas/FT%20El%20Secreto%20Malbec%20Mevushal.pdf",
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "EL SECRETO MALBEC NO MEVUSHAL",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "#",
+    "img": "/images/el_secreto_malbec.jpg",
+    "techsheets": [
+      "/fichas/FT%20El%20Secreto%20Malbec%20No%20Mevushal%20.pdf",
+      "/fichas/FT%20El%20Secreto%20Reserva%20Malbec%20No%20Mevushal%20.pdf"
+    ],
+    "techsheet": "/fichas/FT%20El%20Secreto%20Malbec%20No%20Mevushal%20.pdf",
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "EL SECRETO MALBEC RESERVA MEVUSHAL",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "#",
+    "img": "/images/el_secreto_malbec_rva.jpg",
+    "techsheets": [
+      "/fichas/FT%20El%20Secreto%20Malbec%20Reserva%20Mevushal%20%20.pdf",
+      "/fichas/FT%20El%20Secreto%20Reserva%20Malbec%20No%20Mevushal%20.pdf"
+    ],
+    "techsheet": "/fichas/FT%20El%20Secreto%20Malbec%20Reserva%20Mevushal%20%20.pdf",
+    "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "EL SECRETO MALBEC RESERVA NO MEVUSHAL",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "#",
+    "img": "/images/el_secreto_malbec_rva.jpg",
+    "techsheets": [
+      "/fichas/FT%20El%20Secreto%20Reserva%20Malbec%20No%20Mevushal%20.pdf"
+    ],
+    "techsheet": "/fichas/FT%20El%20Secreto%20Reserva%20Malbec%20No%20Mevushal%20.pdf",
+    "type": "Vino Tinto"
+  }
+]
