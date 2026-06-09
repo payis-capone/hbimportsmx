@@ -474,10 +474,14 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <img src={getFlagUrl('USA')} alt="USA" className="w-full h-full object-cover opacity-90" />
                 </div>
                 <img
-                  className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-105"
-                  data-alt="DNA Vineyards Coro Lifestyle Bottle"
+                  className="absolute left-0 top-0 w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-105"
                   src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
                   alt="DNA Vineyards Mendocino Lifestyle"
+                />
+                <img
+                  className="w-full h-full object-contain object-right opacity-90 transition-transform duration-1000 group-hover:scale-105 relative z-10 mix-blend-multiply"
+                  src="/images/dna_vineyards_bg.png"
+                  alt="DNA Vineyards Cabernet Sauvignon Bottle"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent p-10 flex flex-col justify-end">
                   <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b3Country}</span>
