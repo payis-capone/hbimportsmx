@@ -696,17 +696,20 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4 max-w-5xl mx-auto">
-              {t.distribuidores.list.map((dist: any, index: number) => (
-                <a 
+              {t.distribuidores.list.map((dist: any, index: number) => {
+                const isLink = dist.website && dist.website !== "#" && dist.website !== "";
+                const Wrapper = isLink ? "a" : "div";
+                return (
+                <Wrapper
                   key={index}
-                  href={dist.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between border-b border-black/5 py-4 hover:border-black/20 transition-colors"
+                  href={isLink ? dist.website : undefined}
+                  target={isLink ? "_blank" : undefined}
+                  rel={isLink ? "noopener noreferrer" : undefined}
+                  className={`group flex items-center justify-between border-b border-black/5 py-4 transition-colors ${isLink ? 'hover:border-black/20 cursor-pointer' : ''}`}
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-6">
                     {dist.logo ? (
-                      <div className="w-10 h-10 bg-white border border-black/5 flex items-center justify-center rounded-full shadow-sm overflow-hidden p-1.5 flex-shrink-0">
+                      <div className="w-20 h-20 bg-white border border-black/5 flex items-center justify-center rounded-full shadow-sm overflow-hidden p-3 flex-shrink-0">
                         <img 
                           src={dist.logo} 
                           alt={dist.name} 
@@ -715,15 +718,15 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                         />
                       </div>
                     ) : (
-                      <div className="w-10 h-10 flex items-center justify-center bg-black/5 rounded-full flex-shrink-0">
-                         <span className="material-symbols-outlined text-black/30 text-[16px]">store</span>
+                      <div className="w-20 h-20 flex items-center justify-center bg-black/5 rounded-full flex-shrink-0">
+                         <span className="material-symbols-outlined text-black/30 text-[32px]">store</span>
                       </div>
                     )}
-                    <h3 className="font-headline font-bold text-lg text-secondary group-hover:text-primary transition-colors">{dist.name}</h3>
+                    <h3 className={`font-headline font-bold text-xl text-secondary transition-colors ${isLink ? 'group-hover:text-primary' : ''}`}>{dist.name}</h3>
                   </div>
-                  <span className="material-symbols-outlined text-black/20 group-hover:text-primary transition-colors text-[18px]">open_in_new</span>
-                </a>
-              ))}
+                  {isLink && <span className="material-symbols-outlined text-black/20 group-hover:text-primary transition-colors text-[18px]">open_in_new</span>}
+                </Wrapper>
+              )})}
             </div>
           </div>
         </section>
