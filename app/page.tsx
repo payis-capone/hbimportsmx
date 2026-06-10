@@ -108,9 +108,12 @@ const usaGroups = [
   { group: "DNA VINEYARDS (Mendocino, California)", wines: usaWines.filter(w => w.name.toUpperCase().includes('DNA')) }
 ].filter(g => g.wines.length > 0);
 
-const mexGroups = [
+const mexWinesGroups = [
+  { group: "Décima", wines: mexWines.filter(w => w.name.toUpperCase().includes('DÉCIMA') || w.name.toUpperCase().includes('DECIMA')) }
+].filter(g => g.wines.length > 0);
+
+const mexDestiladosGroups = [
   { group: "Bacanora (Sonora)", wines: mexWines.filter(w => w.name.toUpperCase().includes('BACANORA')) },
-  { group: "Décima", wines: mexWines.filter(w => w.name.toUpperCase().includes('DÉCIMA') || w.name.toUpperCase().includes('DECIMA')) },
   { group: "Tocho Norte", wines: mexWines.filter(w => w.name.toUpperCase().includes('TOCHO')) }
 ].filter(g => g.wines.length > 0);
 
@@ -273,7 +276,8 @@ export default function Home() {
   const currentArgGroups = filterGroups(argGroups);
   const currentEspGroups = filterGroups(espGroups);
   const currentUsaGroups = filterGroups(usaGroups);
-  const currentMexGroups = filterGroups(mexGroups);
+  const currentMexWinesGroups = filterGroups(mexWinesGroups);
+  const currentMexDestiladosGroups = filterGroups(mexDestiladosGroups);
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -650,8 +654,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
               </div>
             )}
 
-            {/* MEXICO */}
-            {currentMexGroups.length > 0 && (
+            {/* MEXICO WINES */}
+            {currentMexWinesGroups.length > 0 && (
               <div className="mb-8 border-b border-black/5 pb-4">
                 <button 
                   onClick={() => toggleCountry('MX')}
@@ -659,11 +663,34 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 >
                   <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span> 
                   México 
-                  <span className="text-secondary/30 text-2xl font-light">({currentMexGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
+                  <span className="text-secondary/30 text-2xl font-light">({currentMexWinesGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
                   <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX'] ? 'rotate-180' : ''}`}>expand_more</span>
                 </button>
                 <div className={`transition-all duration-700 ease-in-out overflow-hidden ${expandedCountries['MX'] ? 'max-h-[10000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
-                  {currentMexGroups.map(g => (
+                  {currentMexWinesGroups.map(g => (
+                    <div key={g.group} className="mb-16">
+                      <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* MEXICO DESTILADOS */}
+            {currentMexDestiladosGroups.length > 0 && (
+              <div className="mb-8 border-b border-black/5 pb-4">
+                <button 
+                  onClick={() => toggleCountry('MX_DEST')}
+                  className="group flex items-center gap-4 w-full text-left font-headline font-bold text-4xl py-6 hover:text-primary transition-all duration-300"
+                >
+                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span> 
+                  Destilados México 
+                  <span className="text-secondary/30 text-2xl font-light">({currentMexDestiladosGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
+                  <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX_DEST'] ? 'rotate-180' : ''}`}>expand_more</span>
+                </button>
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${expandedCountries['MX_DEST'] ? 'max-h-[10000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
+                  {currentMexDestiladosGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
                       <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} />
