@@ -437,8 +437,11 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/vt-12-linajes-roble-750-ml?_pos=33&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/files/12linajesrobles_1_1200x1200.jpg?v=1724691913",
-    "techsheets": [],
-    "type": "Vino Tinto"
+    "techsheets": [
+      "/fichas/Ficha comercial 12 Linajes Roble 2019 DF.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha comercial 12 Linajes Roble 2019 DF.pdf"
   },
   {
     "badge": "ESP",
@@ -487,9 +490,10 @@
     "link": "https://lacubiella.com/products/8420919101834?_pos=37&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/8420919101834_1200x1200.jpg?v=1672955809",
     "techsheets": [
-      "/fichas/Ficha%20comercial%20Catania%20Crianza%202020.pdf"
+      "/fichas/Ficha comercial Catania Crianza 2020.pdf"
     ],
-    "type": "Vino Tinto"
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha comercial Catania Crianza 2020.pdf"
   },
   {
     "badge": "ESP",
@@ -513,16 +517,6 @@
     "techsheets": [
       "/fichas/Fciha%20Comercial%20Valdelamillo%20Crianza%202017%20DF.pdf"
     ],
-    "type": "Vino Tinto"
-  },
-  {
-    "badge": "ESP",
-    "country": "España",
-    "name": "IMPAR VS (ALFAR) 750ml",
-    "desc": "Excelente representante de su denominación de origen y terroir.",
-    "link": "https://lacubiella.com/products/8437002574383?_pos=40&_sid=aaba92eb6&_ss=r",
-    "img": "http://lacubiella.com/cdn/shop/products/8437002574383_6687a007-a086-4802-8fe7-ab5bf70ec2bf_1200x1200.png?v=1626374718",
-    "techsheets": [],
     "type": "Vino Tinto"
   },
   {
@@ -566,9 +560,10 @@
     "link": "https://lacubiella.com/products/8429414222006?_pos=44&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/8429414222006_1200x1200.jpg?v=1670450096",
     "techsheets": [
-      "/fichas/Ficha%20Comercial%2012%20linajes%20Reserva%202016%20DF.pdf"
+      "/fichas/Ficha Comercial 12 linajes Reserva 2016 DF.pdf"
     ],
-    "type": "Vino Tinto"
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha Comercial 12 linajes Reserva 2016 DF.pdf"
   },
   {
     "badge": "ESP",
@@ -578,9 +573,10 @@
     "link": "https://lacubiella.com/products/8429414216005?_pos=45&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/8429414216005_1200x1200.jpg?v=1672955850",
     "techsheets": [
-      "/fichas/Ficha%20t%C3%A9cnica%2012%20Linajes%20crianza%202018.pdf"
+      "/fichas/Ficha técnica 12 Linajes crianza 2018.pdf"
     ],
-    "type": "Vino Tinto"
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha técnica 12 Linajes crianza 2018.pdf"
   },
   {
     "badge": "ARG",
@@ -600,29 +596,10 @@
     "link": "https://lacubiella.com/products/8420919101889?_pos=47&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/8420919101889_1200x1200.png?v=1626374640",
     "techsheets": [
-      "/fichas/Ficha%20comercial%20Catania%20Joven%202019%20DF.pdf"
+      "/fichas/Ficha comercial Catania Joven 2019 DF.pdf"
     ],
-    "type": "Vino Tinto"
-  },
-  {
-    "badge": "ESP",
-    "country": "España",
-    "name": "IMPAR (Alfar) RESERVA 750ml",
-    "desc": "Excelente representante de su denominación de origen y terroir.",
-    "link": "https://lacubiella.com/products/8437002574352?_pos=48&_sid=aaba92eb6&_ss=r",
-    "img": "http://lacubiella.com/cdn/shop/products/8437002574352_c3072ec4-656a-4879-9381-d3eb66d055ce_1200x1200.png?v=1626374714",
-    "techsheets": [],
-    "type": "Vino Tinto"
-  },
-  {
-    "badge": "ESP",
-    "country": "España",
-    "name": "CUSPIDE JOVEN 750ml",
-    "desc": "Excelente representante de su denominación de origen y terroir.",
-    "link": "https://lacubiella.com/products/cuspide-joven?_pos=51&_sid=aaba92eb6&_ss=r",
-    "img": "http://lacubiella.com/cdn/shop/products/80710110171022_771bd72c-21b8-4a5b-89e7-b68b3c2af926_1200x1200.png?v=1622142428",
-    "techsheets": [],
-    "type": "Vino Tinto"
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha comercial Catania Joven 2019 DF.pdf"
   },
   {
     "badge": "ESP",
@@ -631,8 +608,11 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/8429414765305?_pos=52&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/8429414765305_be5a21ed-619a-416d-ac99-0446835ec8fe_1200x1200.png?v=1626374686",
-    "techsheets": [],
-    "type": "Vino Tinto"
+    "techsheets": [
+      "/fichas/Ficha comercial Anier-Vendimia-Seleccionada-2017 DF.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha comercial Anier-Vendimia-Seleccionada-2017 DF.pdf"
   },
   {
     "badge": "MEX",

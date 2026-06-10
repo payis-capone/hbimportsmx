@@ -76,10 +76,7 @@ const espGroups = [
     group: "Rioja — Dominio del Challao (Virna y Angelita)", 
     wines: espWines.filter(w => w.name.toUpperCase().includes('CHALLAO') || w.name.toUpperCase().includes('VIRNA') || w.name.toUpperCase().includes('ANGELITA'))
   },
-  {
-    group: "Rioja — Alfar e Impar",
-    wines: espWines.filter(w => w.name.toUpperCase().includes('ALFAR') || w.name.toUpperCase().includes('IMPAR') || w.name.toUpperCase().includes('CUSPIDE'))
-  },
+
   { 
     group: "Ribera del Duero — Catania y Viña Gormaz", 
     wines: espWines.filter(w => {
