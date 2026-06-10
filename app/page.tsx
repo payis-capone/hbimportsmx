@@ -147,7 +147,7 @@ const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => 
             <a href={wine.techsheet || undefined} target={wine.techsheet ? "_blank" : undefined} rel="noopener noreferrer" className={wine.techsheet ? "cursor-pointer" : "cursor-default pointer-events-none"}>
               <h3 className={`font-headline font-bold text-lg mb-1 pr-2 leading-tight ${wine.techsheet ? 'group-hover:text-primary transition-colors' : 'text-secondary'}`}>{wine.name}</h3>
             </a>
-            <p className="text-on-surface-variant font-light mb-3 leading-relaxed text-[11px] flex-1 line-clamp-2">{wine.desc}</p>
+
             <div className="flex items-center justify-between mt-auto relative">
               <a href={wine.techsheet || '#'} target="_blank" rel="noopener noreferrer" className={`text-secondary font-bold tracking-widest uppercase text-[10px] border-b-2 border-primary pb-1 transition-colors inline-flex items-center gap-2 ${wine.techsheet ? 'group-hover:text-primary' : 'opacity-30 cursor-not-allowed pointer-events-none'}`}>
                 {tBuyBtn} <span className="material-symbols-outlined text-[12px]">download</span>
