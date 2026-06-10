@@ -27,7 +27,19 @@ const argGroups = [
       const n = w.name.toUpperCase();
       return n.includes('PEDREGAL') || n.includes('MAGDALENA') || n.includes('135');
   }) },
-  { group: "Don Aparo (Mendoza)", wines: argWines.filter(w => w.name.toUpperCase().includes('DON APARO')) },
+  { group: "Don Aparo (Mendoza)", wines: argWines.filter(w => w.name.toUpperCase().includes('DON APARO')).sort((a, b) => {
+      const nA = a.name.toUpperCase();
+      const nB = b.name.toUpperCase();
+      const getOrder = (n: string) => {
+        if (n.includes('BLEND')) return 10;
+        if (n.includes('BRUT')) return 20;
+        return 30;
+      };
+      const scoreA = getOrder(nA);
+      const scoreB = getOrder(nB);
+      if (scoreA !== scoreB) return scoreA - scoreB;
+      return nA.localeCompare(nB);
+  }) },
   { group: "El Secreto (Kosher)", wines: argWines.filter(w => w.name.toUpperCase().includes('EL SECRETO')) },
 ].filter(g => g.wines.length > 0);
 
