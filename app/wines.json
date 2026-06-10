@@ -237,8 +237,11 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/decima-cabernet-merlot",
     "img": "http://lacubiella.com/cdn/shop/files/7500462161569_1200x1200.webp?v=1683747431",
-    "techsheets": [],
-    "type": "Vino Tinto"
+    "techsheets": [
+      "/fichas/Ficha Decima Tinto 2022.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha Decima Tinto 2022.pdf"
   },
   {
     "badge": "MEX",
@@ -503,9 +506,10 @@
     "link": "https://lacubiella.com/products/campo-alto-reserva?_pos=38&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/files/CAMPO-ALTO-RESERVA-2_1_1200x1200.jpg?v=1686858803",
     "techsheets": [
-      "/fichas/Ficha%20Comercial%20Campo%20Alto%20Reserva%202015%20DF.pdf"
+      "/fichas/Ficha Comercial Campo Alto Reserva 2015 DF.pdf"
     ],
-    "type": "Vino Tinto"
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha Comercial Campo Alto Reserva 2015 DF.pdf"
   },
   {
     "badge": "ESP",
@@ -515,9 +519,10 @@
     "link": "https://lacubiella.com/products/80210214161022?_pos=39&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/80210214161022_ba707d37-7b26-4003-b707-091d99d3e875_1200x1200.png?v=1626374503",
     "techsheets": [
-      "/fichas/Fciha%20Comercial%20Valdelamillo%20Crianza%202017%20DF.pdf"
+      "/fichas/Fciha Comercial Valdelamillo Crianza 2017 DF.pdf"
     ],
-    "type": "Vino Tinto"
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Fciha Comercial Valdelamillo Crianza 2017 DF.pdf"
   },
   {
     "badge": "ESP",
