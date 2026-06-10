@@ -109,12 +109,12 @@ const usaGroups = [
 ].filter(g => g.wines.length > 0);
 
 const mexWinesGroups = [
-  { group: "Décima", wines: mexWines.filter(w => w.name.toUpperCase().includes('DÉCIMA') || w.name.toUpperCase().includes('DECIMA')) }
+  { group: "Décima", wines: mexWines.filter(w => w.name.toUpperCase().includes('DÉCIMA') || w.name.toUpperCase().includes('DECIMA')) },
+  { group: "Tocho Norte", wines: mexWines.filter(w => w.name.toUpperCase().includes('TOCHO')) }
 ].filter(g => g.wines.length > 0);
 
 const mexDestiladosGroups = [
-  { group: "Bacanora (Sonora)", wines: mexWines.filter(w => w.name.toUpperCase().includes('BACANORA')) },
-  { group: "Tocho Norte", wines: mexWines.filter(w => w.name.toUpperCase().includes('TOCHO')) }
+  { group: "Bacanora (Sonora)", wines: mexWines.filter(w => w.name.toUpperCase().includes('BACANORA')) }
 ].filter(g => g.wines.length > 0);
 
 const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => {

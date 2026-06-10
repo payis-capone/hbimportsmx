@@ -761,9 +761,10 @@
   },
   {
     "badge": "MEX",
-    "country": "México",
+    "country": "Valle de Guadalupe",
     "name": "TOCHO NORTE",
-    "techsheets": []
+    "techsheets": [],
+    "type": "Vino Tinto"
   },
   {
     "badge": "ARG",
