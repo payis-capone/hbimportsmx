@@ -747,7 +747,9 @@
     "country": "Mendoza",
     "name": "PASCUAL TOSO ALTA CABERNET SAUVIGNON 750 ML",
     "type": "Vino Tinto",
-    "techsheets": []
+    "techsheets": [],
+    "link": "https://lacubiella.com/products/pascual-toso-alta-cabernet-sauvignon-6-750ml",
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/PASCUALTOSOALTACABERNET.png?v=1781111233"
   },
   {
     "badge": "ARG",
@@ -757,14 +759,18 @@
     "techsheet": "/fichas/DON APARO CABERNET SAUVIGNON 2024.pdf",
     "techsheets": [
       "/fichas/DON APARO CABERNET SAUVIGNON 2024.pdf"
-    ]
+    ],
+    "link": "https://lacubiella.com/products/don-aparo-cabernet-sauvignon-750-ml",
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/DONAPAROCABERNET_a259ab71-6d01-4c2c-bd61-95e14d0fe16c.jpg?v=1781112650"
   },
   {
     "badge": "MEX",
     "country": "Valle de Guadalupe",
     "name": "TOCHO NORTE",
     "techsheets": [],
-    "type": "Vino Tinto"
+    "type": "Vino Tinto",
+    "link": "https://lacubiella.com/products/tocho-norte-750-ml",
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/TOCHONORTE.png?v=1781110800"
   },
   {
     "badge": "ARG",
@@ -774,6 +780,8 @@
     "techsheet": "/fichas/135 ANIVERSARIO - ESP.pdf",
     "techsheets": [
       "/fichas/135 ANIVERSARIO - ESP.pdf"
-    ]
+    ],
+    "link": "https://lacubiella.com/products/pascual-toso-135-aniversario-750-ml",
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/TOSO135ANIVERSARIO.png?v=1781112102"
   }
 ]
