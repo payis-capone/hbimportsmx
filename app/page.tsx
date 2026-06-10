@@ -664,45 +664,41 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
 
         {/* Presentación: Historia y Estadísticas */}
         {/* Nuestros Distribuidores Oficiales */}
-        <section id="distribuidores" className="py-32 bg-white">
+        <section id="distribuidores" className="py-20 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-20">
+            <div className="text-center mb-16">
               <span className="font-label text-primary tracking-[0.3em] text-[10px] font-bold mb-6 block uppercase">Red Comercial</span>
               <h2 className="font-headline font-bold text-5xl text-secondary mb-6 italic">{t.distribuidores.title}</h2>
               <p className="text-on-surface-variant max-w-2xl mx-auto text-lg">{t.distribuidores.desc}</p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4 max-w-5xl mx-auto">
               {t.distribuidores.list.map((dist: any, index: number) => (
                 <a 
                   key={index}
                   href={dist.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block border border-black/5 p-8 hover:border-primary hover:shadow-2xl transition-all bg-surface relative overflow-hidden"
+                  className="group flex items-center justify-between border-b border-black/5 py-4 hover:border-black/20 transition-colors"
                 >
-                  {/* Decorator */}
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4 group-hover:bg-primary/10 transition-colors"></div>
-                  
-                  {dist.logo ? (
-                    <div className="w-14 h-14 bg-white border border-black/5 flex items-center justify-center rounded-full mb-8 shadow-sm group-hover:-translate-y-1 transition-all overflow-hidden p-[8px]">
-                      <img 
-                        src={dist.logo} 
-                        alt={dist.name} 
-                        className="w-full h-full object-contain mix-blend-multiply"
-                        onError={(e) => { e.currentTarget.parentElement!.style.display = 'none'; }}
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-14 h-14 mb-8 hidden sm:block"></div>
-                  )}
-                  
-                  <h3 className="font-headline font-bold text-2xl mb-3 text-secondary group-hover:text-primary transition-colors leading-tight">{dist.name}</h3>
-                  <p className="text-on-surface-variant text-sm mb-10 font-light leading-relaxed">{dist.desc}</p>
-                  
-                  <span className="text-secondary font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 border-b-2 border-primary pb-1 w-fit group-hover:text-primary transition-colors">
-                    {t.distribuidores.visitBtn} <span className="material-symbols-outlined text-sm">open_in_new</span>
-                  </span>
+                  <div className="flex items-center gap-4">
+                    {dist.logo ? (
+                      <div className="w-10 h-10 bg-white border border-black/5 flex items-center justify-center rounded-full shadow-sm overflow-hidden p-1.5 flex-shrink-0">
+                        <img 
+                          src={dist.logo} 
+                          alt={dist.name} 
+                          className="w-full h-full object-contain mix-blend-multiply"
+                          onError={(e) => { e.currentTarget.parentElement!.style.display = 'none'; }}
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-10 h-10 flex items-center justify-center bg-black/5 rounded-full flex-shrink-0">
+                         <span className="material-symbols-outlined text-black/30 text-[16px]">store</span>
+                      </div>
+                    )}
+                    <h3 className="font-headline font-bold text-lg text-secondary group-hover:text-primary transition-colors">{dist.name}</h3>
+                  </div>
+                  <span className="material-symbols-outlined text-black/20 group-hover:text-primary transition-colors text-[18px]">open_in_new</span>
                 </a>
               ))}
             </div>
