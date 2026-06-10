@@ -749,14 +749,18 @@
     "techsheet": "/fichas/FT-TOSO ESTATE-MALBEC 2024.pdf",
     "techsheets": [
       "/fichas/FT-TOSO ESTATE-MALBEC 2024.pdf"
-    ]
+    ],
+    "link": "https://lacubiella.com/products/7791670021015",
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/PascualTosoEstateMalbec500x500px.jpg?v=1754590384"
   },
   {
     "badge": "ARG",
     "country": "Mendoza",
     "name": "PASCUAL TOSO RESERVA MALBEC 750 ML",
     "type": "Vino Tinto",
-    "techsheets": []
+    "techsheets": [],
+    "link": "https://lacubiella.com/products/7791670019807",
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/PascualTosoRvaMalbec500x500px.jpg?v=1754590340"
   },
   {
     "badge": "ARG",
