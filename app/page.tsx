@@ -484,8 +484,12 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 {/* Layer 2: Bottom black gradient for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent z-10 pointer-events-none"></div>
 
-                {/* Layer 3: White canvas on the right to blend the bottle's white background */}
-                <div className="absolute inset-y-0 right-0 w-[65%] md:w-[70%] bg-white [mask-image:linear-gradient(to_left,black_45%,transparent_100%)] z-20 pointer-events-none transition-transform duration-1000 group-hover:scale-105"></div>
+                {/* Layer 3: Sun flare glow behind the bottle */}
+                {/* This acts as a localized light source to keep the multiplied bottle fully visible, without ruining the vineyard photo */}
+                <div 
+                  className="absolute bottom-[10%] right-[0%] w-[60%] h-[70%] bg-[#fff8ef] rounded-full opacity-90 z-20 pointer-events-none transition-transform duration-1000 group-hover:scale-105"
+                  style={{ filter: 'blur(80px)' }}
+                ></div>
 
                 {/* Layer 4: Bottle Image with multiply blend mode */}
                 <img
