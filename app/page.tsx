@@ -13,19 +13,19 @@ const mexWines = winesData.filter(w => w.badge === 'MEX');
 const argGroups = [
   { group: "Pascual Toso Estate", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();
-      return n.includes('PASCUAL TOSO') && !n.includes('RESERVE') && !n.includes('RESERVA') && !n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA');
+      return n.includes('PASCUAL TOSO') && !n.includes('RESERVE') && !n.includes('RESERVA') && !n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA') && !n.includes('135');
   }) },
   { group: "Pascual Toso Reserva", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();
-      return n.includes('PASCUAL TOSO') && (n.includes('RESERVE') || n.includes('RESERVA')) && !n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA');
+      return n.includes('PASCUAL TOSO') && (n.includes('RESERVE') || n.includes('RESERVA')) && !n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA') && !n.includes('135');
   }) },
   { group: "Pascual Toso Alta", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();
-      return n.includes('PASCUAL TOSO') && n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA');
+      return n.includes('PASCUAL TOSO') && n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA') && !n.includes('135');
   }) },
   { group: "Pascual Toso PREMIUM (Finca Pedregal y Magdalena Toso)", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();
-      return n.includes('PEDREGAL') || n.includes('MAGDALENA');
+      return n.includes('PEDREGAL') || n.includes('MAGDALENA') || n.includes('135');
   }) },
   { group: "Don Aparo (Mendoza)", wines: argWines.filter(w => w.name.toUpperCase().includes('DON APARO')) },
   { group: "El Secreto (Kosher)", wines: argWines.filter(w => w.name.toUpperCase().includes('EL SECRETO')) },
@@ -98,7 +98,8 @@ const usaGroups = [
 
 const mexGroups = [
   { group: "Bacanora (Sonora)", wines: mexWines.filter(w => w.name.toUpperCase().includes('BACANORA')) },
-  { group: "Décima", wines: mexWines.filter(w => !w.name.toUpperCase().includes('BACANORA')) }
+  { group: "Décima", wines: mexWines.filter(w => w.name.toUpperCase().includes('DÉCIMA') || w.name.toUpperCase().includes('DECIMA')) },
+  { group: "Tocho Norte", wines: mexWines.filter(w => w.name.toUpperCase().includes('TOCHO')) }
 ].filter(g => g.wines.length > 0);
 
 const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => {

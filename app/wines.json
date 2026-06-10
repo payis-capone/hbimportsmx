@@ -348,8 +348,11 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/pascual-toso-estate-sauvignon-blanc-750-ml?_pos=26&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/files/PascualTosoEstateSauvBlanc_1200x1200.jpg?v=1750528642",
-    "techsheets": [],
-    "type": "Vino Blanco"
+    "techsheets": [
+      "/fichas/FT-PASCUAL TOSO ESTATE- SAUVIGNON BLANC 2024.pdf"
+    ],
+    "type": "Vino Blanco",
+    "techsheet": "/fichas/FT-PASCUAL TOSO ESTATE- SAUVIGNON BLANC 2024.pdf"
   },
   {
     "badge": "ARG",
@@ -737,5 +740,55 @@
     ],
     "techsheet": "/fichas/FT%20El%20Secreto%20Reserva%20Malbec%20No%20Mevushal%20.pdf",
     "type": "Vino Tinto"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ESTATE MALBEC 750 ML",
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/FT-TOSO ESTATE-MALBEC 2024.pdf",
+    "techsheets": [
+      "/fichas/FT-TOSO ESTATE-MALBEC 2024.pdf"
+    ]
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO RESERVA MALBEC 750 ML",
+    "type": "Vino Tinto",
+    "techsheets": []
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO ALTA CABERNET SAUVIGNON 750 ML",
+    "type": "Vino Tinto",
+    "techsheets": []
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "DON APARO CABERNET SAUVIGNON 750 ML",
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/DON APARO CABERNET SAUVIGNON 2024.pdf",
+    "techsheets": [
+      "/fichas/DON APARO CABERNET SAUVIGNON 2024.pdf"
+    ]
+  },
+  {
+    "badge": "MEX",
+    "country": "México",
+    "name": "TOCHO NORTE",
+    "techsheets": []
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO 135 ANIVERSARIO 750 ML",
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/135 ANIVERSARIO - ESP.pdf",
+    "techsheets": [
+      "/fichas/135 ANIVERSARIO - ESP.pdf"
+    ]
   }
 ]
