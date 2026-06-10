@@ -45,61 +45,64 @@ const argGroups = [
 
 const espGroups = [
   { 
-    group: "Rioja", 
-    wines: espWines.filter(w => {
-      const n = w.name.toUpperCase();
-      return n.includes('CAMPO ALTO') || n.includes('VALDELAMILLO') || n.includes('VALDELACIERVA') || n.includes('CHALLAO') || n.includes('VIRNA') || n.includes('ANGELITA');
-    }).sort((a, b) => {
-      const nA = a.name.toUpperCase();
-      const nB = b.name.toUpperCase();
-      const getOrder = (n: string) => {
-        let score = 0;
-        if (n.includes('VALDELACIERVA')) score = 10;
-        else if (n.includes('CAMPO ALTO')) score = 20;
-        else if (n.includes('VALDELAMILLO')) score = 30;
-        else if (n.includes('CHALLAO') || n.includes('VIRNA') || n.includes('ANGELITA')) score = 40;
-        else score = 50;
-        
-        if (n.includes('CRIANZA')) score += 1;
-        else if (n.includes('RESERVA') || n.includes('RESERVE')) score += 2;
-        else score += 3;
-
-        return score;
-      };
-      return getOrder(nA) - getOrder(nB);
+    group: "Rioja — Campo Alto", 
+    wines: espWines.filter(w => w.name.toUpperCase().includes('CAMPO ALTO')).sort((a, b) => {
+      const getOrder = (n: string) => n.includes('JOVEN') ? 1 : n.includes('CRIANZA') ? 2 : 3;
+      return getOrder(a.name.toUpperCase()) - getOrder(b.name.toUpperCase());
     })
   },
   { 
-    group: "Ribera del Duero", 
+    group: "Rioja — Valdelamillo", 
+    wines: espWines.filter(w => w.name.toUpperCase().includes('VALDELAMILLO'))
+  },
+  { 
+    group: "Rioja — Valdelacierva Clásica", 
     wines: espWines.filter(w => {
       const n = w.name.toUpperCase();
-      return n.includes('CATANIA') || n.includes('GORMAZ') || n.includes('LINAJES') || n.includes('LINAGES') || n.includes('ANIER');
+      return n.includes('VALDELACIERVA') && !n.includes('MONTEPEDRIZA') && !n.includes('CANTOGORDO');
     }).sort((a, b) => {
-      const nA = a.name.toUpperCase();
-      const nB = b.name.toUpperCase();
-      const getOrder = (n: string) => {
-        let score = 0;
-        if (n.includes('CATANIA')) score = 10;
-        else if (n.includes('GORMAZ')) score = 20;
-        else if (n.includes('LINAJES') || n.includes('LINAGES')) score = 30;
-        else if (n.includes('ANIER')) score = 40;
-        else score = 50;
-
-        if (n.includes('CRIANZA')) score += 1;
-        else if (n.includes('RESERVA') || n.includes('RESERVE')) score += 2;
-        else score += 3;
-
-        return score;
-      };
-      return getOrder(nA) - getOrder(nB);
+      const getOrder = (n: string) => n.includes('CRIANZA') ? 1 : n.includes('RESERVA') ? 2 : 3;
+      return getOrder(a.name.toUpperCase()) - getOrder(b.name.toUpperCase());
+    })
+  },
+  { 
+    group: "Rioja — Valdelacierva Premium (Montepedriza y Cantogordo)", 
+    wines: espWines.filter(w => {
+      const n = w.name.toUpperCase();
+      return n.includes('VALDELACIERVA') && (n.includes('MONTEPEDRIZA') || n.includes('CANTOGORDO'));
+    })
+  },
+  { 
+    group: "Rioja — Dominio del Challao (Virna y Angelita)", 
+    wines: espWines.filter(w => w.name.toUpperCase().includes('CHALLAO') || w.name.toUpperCase().includes('VIRNA') || w.name.toUpperCase().includes('ANGELITA'))
+  },
+  {
+    group: "Rioja — Alfar e Impar",
+    wines: espWines.filter(w => w.name.toUpperCase().includes('ALFAR') || w.name.toUpperCase().includes('IMPAR') || w.name.toUpperCase().includes('CUSPIDE'))
+  },
+  { 
+    group: "Ribera del Duero — Catania y Viña Gormaz", 
+    wines: espWines.filter(w => {
+      const n = w.name.toUpperCase();
+      return n.includes('CATANIA') || n.includes('GORMAZ');
+    }).sort((a, b) => {
+      const getOrder = (n: string) => n.includes('JOVEN') ? 1 : n.includes('CRIANZA') ? 2 : 3;
+      return getOrder(a.name.toUpperCase()) - getOrder(b.name.toUpperCase());
+    })
+  },
+  { 
+    group: "Ribera del Duero — 12 Linajes y Anier", 
+    wines: espWines.filter(w => {
+      const n = w.name.toUpperCase();
+      return n.includes('LINAJES') || n.includes('ANIER');
+    }).sort((a, b) => {
+      const getOrder = (n: string) => n.includes('ROBLE') ? 1 : n.includes('CRIANZA') ? 2 : n.includes('RESERVA') ? 3 : 4;
+      return getOrder(a.name.toUpperCase()) - getOrder(b.name.toUpperCase());
     })
   },
   { 
     group: "Rueda", 
-    wines: espWines.filter(w => {
-      const n = w.name.toUpperCase();
-      return n.includes('GARCIGRANDE') || n.includes('RUEDA');
-    }) 
+    wines: espWines.filter(w => w.name.toUpperCase().includes('GARCIGRANDE') || w.name.toUpperCase().includes('RUEDA'))
   }
 ].filter(g => g.wines.length > 0);
 
