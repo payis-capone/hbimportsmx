@@ -491,31 +491,14 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <img src={getFlagUrl('USA')} alt="USA" className="w-full h-full object-cover opacity-90" />
                 </div>
                 
-                {/* Layer 1: Full color vineyard image */}
                 <img
                   className="absolute left-0 top-0 w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105 z-0"
-                  src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-                  alt="DNA Vineyards Mendocino Lifestyle"
+                  src="/images/dna%20cabsav.jpeg"
+                  alt="DNA Vineyards"
                 />
 
-                {/* Layer 2: Bottom black gradient for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10 pointer-events-none"></div>
 
-                {/* Layer 3: Sun flare glow behind the bottle */}
-                {/* This acts as a localized light source to keep the multiplied bottle fully visible, without ruining the vineyard photo */}
-                <div 
-                  className="absolute bottom-[10%] right-[0%] w-[60%] h-[70%] bg-[#fff8ef] rounded-full opacity-90 z-20 pointer-events-none transition-transform duration-1000 group-hover:scale-105"
-                  style={{ filter: 'blur(80px)' }}
-                ></div>
-
-                {/* Layer 4: Bottle Image with multiply blend mode */}
-                <img
-                  className="absolute bottom-0 right-[-5%] w-[70%] h-[95%] object-contain object-bottom transition-transform duration-1000 group-hover:scale-105 z-30 mix-blend-multiply"
-                  src="/images/dna_cabernet_sauvignon.webp"
-                  alt="DNA Vineyards Cabernet Sauvignon Bottle"
-                />
-
-                {/* Layer 5: Text UI */}
                 <div className="absolute inset-0 p-10 flex flex-col justify-end z-40 pointer-events-none">
                   <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b3Country}</span>
                   <h3 className="text-white font-headline font-bold text-3xl group-hover:text-primary transition-colors" style={{ textShadow: '0px 4px 16px rgba(0,0,0,0.9)' }}>{t.brands.b3Brand}</h3>
