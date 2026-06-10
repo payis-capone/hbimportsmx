@@ -381,7 +381,10 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/pascual-toso-finca-pedregal?_pos=29&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/files/pascualtosofincapedregal_1_1200x1200.png?v=1754509248",
-    "techsheets": [],
+    "techsheet": "/fichas/FT FINCA PEDREGAL 2020 - ESP.pdf",
+    "techsheets": [
+      "/fichas/FT FINCA PEDREGAL 2020 - ESP.pdf"
+    ],
     "type": "Vino Tinto"
   },
   {
