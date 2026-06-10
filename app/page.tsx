@@ -731,7 +731,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
         {/* Landing Page Contacto Inbound & Distribuidores */}
         <section className="py-16 md:py-24 bg-secondary">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <div className="bg-white grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden shadow-2xl" id="contacto">
+            <div className="bg-white grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden shadow-2xl rounded-3xl" id="contacto">
               {/* Información Distribuidores */}
               <div className="p-10 md:p-20 bg-primary flex flex-col justify-center min-h-[350px]">
                 <span className="material-symbols-outlined text-white/50 text-5xl mb-8">handshake</span>
@@ -784,6 +784,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                     <span className="text-primary text-xs font-bold mt-2 font-label uppercase">Hubo un error, por favor intenta nuevamente.</span>
                   )}
                 </form>
+                <img src="/logo.png" alt="HB Imports México" className="absolute bottom-10 right-10 w-24 md:w-32 opacity-20 pointer-events-none mix-blend-multiply" />
               </div>
             </div>
           </div>
