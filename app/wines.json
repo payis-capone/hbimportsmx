@@ -71,8 +71,11 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/vt-valdelamillo-reserva-12-750-ml?_pos=6&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/files/80210216141022_1200x1200.webp?v=1683740982",
-    "techsheets": [],
-    "type": "Vino Tinto"
+    "techsheets": [
+      "/fichas/Ficha Comercial Valdelamillo Reserva 2016.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha Comercial Valdelamillo Reserva 2016.pdf"
   },
   {
     "badge": "ARG",
@@ -550,8 +553,11 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/8420919101605?_pos=42&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/8420919101605_78abf4d6-38d0-42f6-ba62-c5c83d143ea9_1200x1200.png?v=1626374636",
-    "techsheets": [],
-    "type": "Vino Tinto"
+    "techsheets": [
+      "/fichas/Ficha comercial Campo Alto Crianza 2020.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha comercial Campo Alto Crianza 2020.pdf"
   },
   {
     "badge": "ESP",
@@ -560,8 +566,11 @@
     "desc": "Excelente representante de su denominación de origen y terroir.",
     "link": "https://lacubiella.com/products/8429414129916?_pos=43&_sid=aaba92eb6&_ss=r",
     "img": "http://lacubiella.com/cdn/shop/products/8429414129916_1200x1200.jpg?v=1672955827",
-    "techsheets": [],
-    "type": "Vino Tinto"
+    "techsheets": [
+      "/fichas/Viña Gormaz Crianza 2020.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Viña Gormaz Crianza 2020.pdf"
   },
   {
     "badge": "ESP",
