@@ -38,6 +38,20 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["https://hbimports.mx/og-white.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/hb_icon_192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/hb_icon_512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/hb_icon_180x180.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  appleWebApp: {
+    title: "HB Imports",
+    statusBarStyle: "default",
+    capable: true,
+  },
 };
 
 export default function RootLayout({
