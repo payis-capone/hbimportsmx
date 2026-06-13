@@ -110,6 +110,7 @@ const usaGroups = [
 
 const mexWinesGroups = [
   { group: "Décima", wines: mexWines.filter(w => w.name.toUpperCase().includes('DÉCIMA') || w.name.toUpperCase().includes('DECIMA')) },
+  { group: "Primera Piedra", wines: mexWines.filter(w => w.name.toUpperCase().includes('PRIMERA PIEDRA')) },
   { group: "Tocho Norte", wines: mexWines.filter(w => w.name.toUpperCase().includes('TOCHO')) }
 ].filter(g => g.wines.length > 0);
 
