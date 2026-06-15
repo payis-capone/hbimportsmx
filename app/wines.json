@@ -782,9 +782,12 @@
     "country": "Mendoza",
     "name": "PASCUAL TOSO ALTA CABERNET SAUVIGNON 750 ML",
     "type": "Vino Tinto",
-    "techsheets": [],
+    "techsheets": [
+      "/fichas/FT-PASCUAL TOSO ALTA-CAB. SAUVIGNON-2022.pdf"
+    ],
     "link": "https://lacubiella.com/products/pascual-toso-alta-cabernet-sauvignon-6-750ml",
-    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/PASCUALTOSOALTACABERNET.png?v=1781111233"
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/PASCUALTOSOALTACABERNET.png?v=1781111233",
+    "techsheet": "/fichas/FT-PASCUAL TOSO ALTA-CAB. SAUVIGNON-2022.pdf"
   },
   {
     "badge": "ARG",
