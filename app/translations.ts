@@ -116,7 +116,7 @@ export const translations = {
         { name: "Cava Bellizia", desc: "Distribuidor Oficial", website: "https://www.instagram.com/cavabellizia", logo: "/images/logo_bellizia.png" },
         { name: "Ultramarinos Coliseo", desc: "Distribuidor Oficial", website: "https://ucoliseo.com.mx/", logo: "https://ucoliseo.com.mx/wp-content/uploads/2023/02/cropped-uc_logo_website_negro-1.jpeg" },
         { name: "La Misión", desc: "Distribuidor Oficial", website: "https://www.vinoslamision.com.mx/", logo: "/images/logo_mision.jpg" },
-        { name: "Cava Sautto", desc: "Distribuidor Oficial", website: "https://www.cavasautto.com/products/vino-tinto-12-linajes-crianza-750ml?_pos=1&_sid=28facfc8b&_ss=r", logo: "" }
+        { name: "Cava Sautto", desc: "Distribuidor Oficial", website: "https://www.cavasautto.com/products/vino-tinto-12-linajes-crianza-750ml?_pos=1&_sid=28facfc8b&_ss=r", logo: "/images/logo_sautto.png" }
       ]
     },
     cta: {
@@ -262,7 +262,7 @@ export const translations = {
         { name: "Cava Bellizia", desc: "Official Distributor", website: "https://www.instagram.com/cavabellizia", logo: "/images/logo_bellizia.png" },
         { name: "Ultramarinos Coliseo", desc: "Official Distributor", website: "https://ucoliseo.com.mx/", logo: "https://ucoliseo.com.mx/wp-content/uploads/2023/02/cropped-uc_logo_website_negro-1.jpeg" },
         { name: "La Misión", desc: "Official Distributor", website: "https://www.vinoslamision.com.mx/", logo: "/images/logo_mision.jpg" },
-        { name: "Cava Sautto", desc: "Official Distributor", website: "https://www.cavasautto.com/products/vino-tinto-12-linajes-crianza-750ml?_pos=1&_sid=28facfc8b&_ss=r", logo: "" }
+        { name: "Cava Sautto", desc: "Official Distributor", website: "https://www.cavasautto.com/products/vino-tinto-12-linajes-crianza-750ml?_pos=1&_sid=28facfc8b&_ss=r", logo: "/images/logo_sautto.png" }
       ]
     },
     cta: {
