@@ -795,10 +795,13 @@
     "badge": "MEX",
     "country": "Valle de Guadalupe",
     "name": "TOCHO NORTE",
-    "techsheets": [],
+    "techsheets": [
+      "/fichas/Tocho_Norte_ficha_tecnica.pdf"
+    ],
     "type": "Vino Tinto",
     "link": "https://lacubiella.com/products/tocho-norte-750-ml",
-    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/TOCHONORTE.png?v=1781110800"
+    "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/TOCHONORTE.png?v=1781110800",
+    "techsheet": "/fichas/Tocho_Norte_ficha_tecnica.pdf"
   },
   {
     "badge": "ARG",
