@@ -151,7 +151,7 @@ const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => 
               <div className="absolute top-4 left-4 flex w-6 h-4 shadow-md border border-black/10 rounded-[1px] overflow-hidden bg-gray-100 z-10">
                 <img src={getFlagUrl(wine.badge)} title={wine.badge} alt={wine.badge} className="w-full h-full object-cover" />
               </div>
-              {wine.img ? <img className="max-h-full object-contain transition-transform duration-700 group-hover:scale-110 mix-blend-multiply" src={wine.img} alt={wine.name} /> : <div className="text-secondary/20 font-bold uppercase tracking-widest text-[10px] text-center">Ficha / Foto <br/>en Camino</div>}
+              {wine.img ? <img className={`object-contain transition-transform duration-700 group-hover:scale-110 mix-blend-multiply ${wine.name.includes('Nueva Imagen') ? 'max-h-[75%]' : 'max-h-full'}`} src={wine.img} alt={wine.name} /> : <div className="text-secondary/20 font-bold uppercase tracking-widest text-[10px] text-center">Ficha / Foto <br/>en Camino</div>}
             </a>
             <div className="flex items-center justify-between w-full gap-2 mb-2">
               <span className="font-label text-[9px] text-primary font-bold tracking-[0.3em] uppercase">{wine.country}</span>
