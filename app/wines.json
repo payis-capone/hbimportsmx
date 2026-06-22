@@ -814,5 +814,18 @@
     ],
     "link": "https://lacubiella.com/products/pascual-toso-135-aniversario-750-ml",
     "img": "https://cdn.shopify.com/s/files/1/0558/0390/4172/files/TOSO135ANIVERSARIO.png?v=1781112102"
+  },
+  {
+    "badge": "MEX",
+    "country": "México",
+    "name": "DECIMA CABERNET - MERLOT (Nueva Imagen) 750ml",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "https://lacubiella.com/products/decima-cabernet-merlot",
+    "img": "/images/D_tinto_frontal.jpg",
+    "techsheets": [
+      "/fichas/Ficha Decima Tinto 2022.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/Ficha Decima Tinto 2022.pdf"
   }
 ]
