@@ -889,6 +889,16 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
             <span className="material-symbols-outlined text-secondary hover:text-primary transition-colors cursor-pointer">social_distance</span>
           </div>
         </div>
+        <div className="max-w-7xl mx-auto px-8 mt-10 flex justify-center items-center gap-3">
+          <span className="text-on-surface-variant text-[10px] font-bold uppercase tracking-[0.2em]">{t.footer.createdBy}</span>
+          <img
+            src="/images/ladob-logo.png"
+            alt="Lado B"
+            className="h-6 w-auto object-contain"
+            onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling?.removeAttribute('hidden'); }}
+          />
+          <span hidden className="text-secondary font-black text-[11px] tracking-[0.25em]">LADO B</span>
+        </div>
       </footer>
     </>
   );

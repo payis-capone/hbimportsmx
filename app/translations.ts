@@ -143,6 +143,7 @@ export const translations = {
       nlTitle: "Suscríbete al Boletín",
       nlPh: "Tu correo electrónico",
       copyright: "© 2024 HB Imports MX. Evita el exceso.",
+      createdBy: "Sitio web creado por",
     }
   },
   en: {
@@ -289,6 +290,7 @@ export const translations = {
       nlTitle: "Subscribe to Newsletter",
       nlPh: "Your email address",
       copyright: "© 2024 HB Imports MX. Drink responsibly.",
+      createdBy: "Website created by",
     }
   }
 };
