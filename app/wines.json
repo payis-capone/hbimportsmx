@@ -377,19 +377,6 @@
     "type": "Vino Blanco"
   },
   {
-    "badge": "ESP",
-    "country": "España",
-    "name": "VALDELACIERVA ROSADO 750 ML",
-    "desc": "Excelente representante de su denominación de origen y terroir.",
-    "link": "https://lacubiella.com/products/valdelacierva-rosado-750-ml?_pos=28&_sid=aaba92eb6&_ss=r",
-    "img": "/images/catalog/valdelacierva_rosado_750_ml.jpg",
-    "techsheets": [
-      "/fichas/Ficha-comercial-Valdelacierva-Rose-2023.pdf"
-    ],
-    "type": "Vino Rosado",
-    "techsheet": "/fichas/Ficha-comercial-Valdelacierva-Rose-2023.pdf"
-  },
-  {
     "badge": "ARG",
     "country": "Mendoza",
     "name": "PASCUAL TOSO FINCA PEDREGAL",
@@ -646,19 +633,6 @@
     ],
     "type": "Bacanora",
     "techsheet": "/fichas/Bacanora Aguamiel Aniversario Fernando Robles 750ml.pdf"
-  },
-  {
-    "badge": "MEX",
-    "country": "Sonora",
-    "name": "CREMA DE BACANORA AGUAMIEL 750 ML",
-    "desc": "Excelente representante de su destilación y región.",
-    "link": "https://lacubiella.com/products/crema-de-bacanora-aguamiel-750-ml",
-    "img": "/images/catalog/crema_de_bacanora_aguamiel_750_ml.jpg",
-    "techsheets": [
-      "/fichas/Ficha tecnica Crema de Aguamiel 2024.pdf"
-    ],
-    "type": "Bacanora",
-    "techsheet": "/fichas/Ficha tecnica Crema de Aguamiel 2024.pdf"
   },
   {
     "badge": "MEX",
