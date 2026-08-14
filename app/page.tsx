@@ -144,7 +144,7 @@ const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => 
   return (
     <div className="relative group/carousel">
       {/* Scrollable Container */}
-      <div ref={scrollRef} className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 custom-scrollbar scroll-smooth">
+      <div ref={scrollRef} className="flex overflow-x-auto snap-x snap-proximity gap-6 pb-8 custom-scrollbar">
         {wines.map((wine: any, index: number) => (
           <div key={index} className="group flex flex-col h-full w-[180px] md:w-[220px] snap-start shrink-0">
             <a href={wine.techsheet || undefined} target={wine.techsheet ? "_blank" : undefined} rel="noopener noreferrer" className={`block aspect-[3/4] bg-white mb-4 flex items-center justify-center p-4 transition-all duration-500 relative border border-black/5 rounded-3xl group-hover:-translate-y-2 group-hover:shadow-xl ${wine.techsheet ? 'cursor-pointer' : 'cursor-default'}`}>
