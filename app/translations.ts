@@ -142,7 +142,7 @@ export const translations = {
       l3: "Consumo Responsable",
       nlTitle: "Suscríbete al Boletín",
       nlPh: "Tu correo electrónico",
-      copyright: "© 2024 HB Imports MX. Evita el exceso.",
+      copyright: "HB Imports MX. Evita el exceso.",
       createdBy: "Sitio web creado por",
     },
     ageGate: {
@@ -300,7 +300,7 @@ export const translations = {
       l3: "Drink Responsibly",
       nlTitle: "Subscribe to Newsletter",
       nlPh: "Your email address",
-      copyright: "© 2024 HB Imports MX. Drink responsibly.",
+      copyright: "HB Imports MX. Drink responsibly.",
       createdBy: "Website created by",
     },
     ageGate: {
