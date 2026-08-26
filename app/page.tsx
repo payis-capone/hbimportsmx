@@ -7,6 +7,9 @@ import GlobeMap from './GlobeMap';
 import AgeGate from './AgeGate';
 import SiteFooter from './SiteFooter';
 
+// Clave pública de Web3Forms para el formulario de distribuidores
+const WEB3FORMS_ACCESS_KEY = "[PEGAR_KEY_NUEVA_DE_HB]";
+
 const argWines = winesData.filter(w => w.badge === 'ARG');
 const usaWines = winesData.filter(w => w.badge === 'USA');
 const espWines = winesData.filter(w => w.badge === 'ESP');
@@ -252,7 +255,7 @@ const getFlagUrl = (badge: string) => {
 export default function Home() {
   const [lang, setLang] = useState<'es' | 'en'>('es');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [formState, setFormState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [formState, setFormState] = useState<'idle' | 'loading' | 'success' | 'error' | 'invalid'>('idle');
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [expandedCountries, setExpandedCountries] = useState<Record<string, boolean>>({});
@@ -295,27 +298,56 @@ export default function Home() {
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
+
+    // Honeypot: si un bot llenó el campo oculto, fingimos éxito sin enviar
+    if (data['botcheck']) {
+      setFormState('success');
+      form.reset();
+      return;
+    }
+
+    // Validación básica
+    const nombre = (data['Nombre'] || '').trim();
+    const telefono = (data['Teléfono'] || '').trim();
+    const correo = (data['Correo'] || '').trim();
+    if (!nombre || telefono.replace(/\D/g, '').length < 7 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+      setFormState('invalid');
+      return;
+    }
+
     setFormState('loading');
-    
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-    
-    const subject = encodeURIComponent("NUEVA SOLICITUD DE DISTRIBUIDOR - HB WEB");
-    const bodyText = `Nombre: ${data['Nombre'] || 'N/A'}
-Empresa: ${data['Empresa'] || 'N/A'}
-Ubicación: ${data['Ubicacion'] || 'N/A'}
-Teléfono: ${data['Teléfono'] || 'N/A'}
-Correo: ${data['Correo'] || 'N/A'}
-Mensaje: ${data['Mensaje'] || 'N/A'}`;
-    
-    const body = encodeURIComponent(bodyText);
-    
-    // Fallback nativo ante la caída global de formsubmit.co
-    window.location.href = `mailto:raulrivas@hbimports.mx?subject=${subject}&body=${body}`;
-    
-    setFormState('success');
-    e.currentTarget.reset();
-    setTimeout(() => setFormState('idle'), 5000);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: 'Solicitud de distribución — HB Imports',
+          from_name: 'Sitio HB Imports',
+          replyto: correo,
+          botcheck: '',
+          'Nombre': nombre,
+          'Empresa': (data['Empresa'] || '').trim(),
+          'Estado/Ciudad': (data['Ubicacion'] || '').trim(),
+          'Teléfono': telefono,
+          'Correo': correo,
+          'Mensaje': (data['Mensaje'] || '').trim(),
+        }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        setFormState('success');
+        form.reset();
+        setTimeout(() => setFormState('idle'), 8000);
+      } else {
+        setFormState('error');
+      }
+    } catch {
+      setFormState('error');
+    }
   };
 
   return (
@@ -761,6 +793,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
               {/* Formulario */}
               <div className="p-10 md:p-20 bg-white flex flex-col justify-center relative">
                 <form onSubmit={handleFormSubmit} className="flex flex-col gap-8">
+                  {/* Honeypot anti-spam: invisible para humanos */}
+                  <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-secondary font-bold tracking-widest uppercase text-[10px] mb-2">{t.cta.fContactName} <span className="text-primary">*</span></label>
@@ -794,13 +828,22 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   </div>
                   
                   <button type="submit" disabled={formState === 'loading' || formState === 'success'} className="bg-black text-white px-8 py-5 mt-2 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-primary transition-all w-fit flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
-                    {formState === 'loading' ? 'Enviando...' : formState === 'success' ? '¡Enviado!' : t.cta.c2Btn}
-                    {formState === 'idle' && <span className="material-symbols-outlined text-sm">send</span>}
+                    {formState === 'loading' ? t.cta.fSending : formState === 'success' ? t.cta.fSuccess : t.cta.c2Btn}
+                    {(formState === 'idle' || formState === 'invalid' || formState === 'error') && <span className="material-symbols-outlined text-sm">send</span>}
                     {formState === 'success' && <span className="material-symbols-outlined text-sm">check_circle</span>}
                   </button>
 
+                  {formState === 'success' && (
+                    <span className="text-secondary text-xs font-bold mt-2 font-label uppercase" role="status">{t.cta.fSuccessDesc}</span>
+                  )}
+                  {formState === 'invalid' && (
+                    <span className="text-primary text-xs font-bold mt-2 font-label uppercase" role="alert">{t.cta.fInvalid}</span>
+                  )}
                   {formState === 'error' && (
-                    <span className="text-primary text-xs font-bold mt-2 font-label uppercase">Hubo un error, por favor intenta nuevamente.</span>
+                    <span className="text-primary text-xs font-bold mt-2 font-label uppercase" role="alert">
+                      {t.cta.fError}{' '}
+                      <a href="mailto:raulrivas@hbimports.mx" className="underline hover:text-secondary transition-colors normal-case">raulrivas@hbimports.mx</a>
+                    </span>
                   )}
                 </form>
                 <img src="/logo.png" alt="HB Imports México" className="absolute bottom-10 right-10 w-24 md:w-32 opacity-20 pointer-events-none mix-blend-multiply" />

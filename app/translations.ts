@@ -132,6 +132,11 @@ export const translations = {
       fPhone: "Teléfono",
       fEmail: "Correo electrónico",
       fMsg: "Mensaje",
+      fSending: "Enviando...",
+      fSuccess: "¡Solicitud enviada!",
+      fSuccessDesc: "Gracias por tu interés. Nuestro equipo te contactará muy pronto.",
+      fError: "No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos directamente a",
+      fInvalid: "Revisa los campos marcados: necesitamos tu nombre, un teléfono y un correo válido.",
     },
     footer: {
       desc: "Importando y distribuyendo los vinos más representativos del mundo para México. Elevando el estándar en cada botella.",
@@ -290,6 +295,11 @@ export const translations = {
       fPhone: "Phone Number",
       fEmail: "Email Address",
       fMsg: "Message",
+      fSending: "Sending...",
+      fSuccess: "Application sent!",
+      fSuccessDesc: "Thank you for your interest. Our team will contact you very soon.",
+      fError: "We couldn't send your application. Please try again or write to us directly at",
+      fInvalid: "Please review the highlighted fields: we need your name, a phone number and a valid email.",
     },
     footer: {
       desc: "Importing and distributing the most representative wines of the world for Mexico. Elevating the standard in every bottle.",
