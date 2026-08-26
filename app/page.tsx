@@ -120,7 +120,20 @@ const mexDestiladosGroups = [
   { group: "Bacanora (Sonora)", wines: mexWines.filter(w => w.name.toUpperCase().includes('BACANORA')) }
 ].filter(g => g.wines.length > 0);
 
-const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => {
+// Los nombres de vinos no se traducen; tipos y regiones de la data sí
+const typeEn: Record<string, string> = {
+  'Vino Tinto': 'Red Wine',
+  'Vino Blanco': 'White Wine',
+  'Vino Rosado': 'Rosé Wine',
+};
+const countryEn: Record<string, string> = {
+  'España': 'Spain',
+  'México': 'Mexico',
+};
+const trType = (type: string, lang: 'es' | 'en') => (lang === 'en' ? (typeEn[type] || type) : type);
+const trCountry = (country: string, lang: 'es' | 'en') => (lang === 'en' ? (countryEn[country] || country) : country);
+
+const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string, lang: 'es' | 'en' }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
@@ -153,13 +166,13 @@ const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => 
               <div className="absolute top-4 left-4 flex w-6 h-4 shadow-md border border-black/10 rounded-[1px] overflow-hidden bg-gray-100 z-10">
                 <img src={getFlagUrl(wine.badge)} title={wine.badge} alt={wine.badge} className="w-full h-full object-cover" />
               </div>
-              {wine.img ? <img className={`object-contain transition-transform duration-700 group-hover:scale-110 mix-blend-multiply max-h-full`} src={wine.img} alt={wine.name} /> : <div className="text-secondary/20 font-bold uppercase tracking-widest text-[10px] text-center">Ficha / Foto <br/>en Camino</div>}
+              {wine.img ? <img className={`object-contain transition-transform duration-700 group-hover:scale-110 mix-blend-multiply max-h-full`} src={wine.img} alt={wine.name} /> : <div className="text-secondary/20 font-bold uppercase tracking-widest text-[10px] text-center">{lang === 'es' ? <>Ficha / Foto <br/>en Camino</> : <>Sheet / Photo <br/>Coming Soon</>}</div>}
             </a>
             <div className="flex items-center justify-between w-full gap-2 mb-2">
-              <span className="font-label text-[9px] text-primary font-bold tracking-[0.3em] uppercase">{wine.country}</span>
+              <span className="font-label text-[9px] text-primary font-bold tracking-[0.3em] uppercase">{trCountry(wine.country, lang)}</span>
               {wine.type && (
                 <span className="bg-[#B21F24] text-white text-[8px] font-bold tracking-widest uppercase px-2 py-1 rounded-full whitespace-nowrap">
-                  {wine.type}
+                  {trType(wine.type, lang)}
                 </span>
               )}
             </div>
@@ -182,7 +195,7 @@ const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => 
                       setOpenDropdown(openDropdown === index ? null : index); 
                     }}
                     className="text-secondary hover:text-primary transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100"
-                    title="Ver más añadas y fichas técnicas"
+                    title={lang === 'es' ? 'Ver más añadas y fichas técnicas' : 'See more vintages and tech sheets'}
                   >
                     <span className="material-symbols-outlined text-[18px]">more_horiz</span>
                   </button>
@@ -190,7 +203,7 @@ const WineCarousel = ({ wines, tBuyBtn }: { wines: any[], tBuyBtn: string }) => 
                   {openDropdown === index && (
                     <div className="absolute bottom-full right-0 mb-2 w-56 bg-white border border-gray-100 shadow-2xl rounded-xl py-2 z-50 overflow-hidden flex flex-col transform origin-bottom-right transition-all">
                       <div className="px-4 py-3 border-b border-gray-50 text-[9px] font-bold tracking-[0.2em] text-gray-400 uppercase bg-gray-50/50">
-                        Añadas Disponibles
+                        {lang === 'es' ? 'Añadas Disponibles' : 'Available Vintages'}
                       </div>
                       <div className="max-h-48 overflow-y-auto custom-scrollbar">
                         {wine.techsheets.map((ts: string, i: number) => {
@@ -267,6 +280,7 @@ export default function Home() {
   }, []);
   useEffect(() => {
     try { window.localStorage.setItem('hb_lang', lang); } catch {}
+    document.documentElement.lang = lang;
   }, [lang]);
 
   const toggleCountry = (country: string) => {
@@ -369,7 +383,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                       document.getElementById('catalogo')?.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  placeholder="BUSCAR..." 
+                  placeholder={lang === 'es' ? 'BUSCAR...' : 'SEARCH...'}
                   className="absolute right-12 w-48 md:w-64 bg-white border border-gray-200 rounded-full px-4 py-2 text-[16px] md:text-[10px] font-bold font-label tracking-[0.2em] uppercase text-secondary focus:outline-none focus:border-primary shadow-lg"
                 />
               )}
@@ -387,7 +401,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
               </button>
               {isSearchOpen && (
                 <button onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }} className="absolute -bottom-8 right-2 text-[9px] text-gray-400 font-bold uppercase tracking-widest hover:text-primary">
-                  Cerrar
+                  {lang === 'es' ? 'Cerrar' : 'Close'}
                 </button>
               )}
             </div>
@@ -469,7 +483,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
               <div className="max-w-xl">
-                <span className="font-label text-primary tracking-[0.3em] text-xs font-bold mb-6 block uppercase">Recursos Informativos</span>
+                <span className="font-label text-primary tracking-[0.3em] text-xs font-bold mb-6 block uppercase">{lang === 'es' ? 'Recursos Informativos' : 'Resource Center'}</span>
                 <h2 className="font-headline font-bold text-5xl text-secondary mb-6 italic">{t.brands.title}</h2>
                 {t.brands.desc && <p className="text-on-surface-variant leading-relaxed text-lg">{t.brands.desc}</p>}
               </div>
@@ -600,7 +614,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentArgGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
                     </div>
                   ))}
                 </div>
@@ -614,8 +628,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   onClick={() => toggleCountry('ES')}
                   className="group flex items-center gap-4 w-full text-left font-headline font-bold text-4xl py-6 hover:text-primary transition-all duration-300"
                 >
-                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">ESP</span> 
-                  España 
+                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">ESP</span>
+                  {lang === 'es' ? 'España' : 'Spain'}
                   <span className="text-secondary/30 text-2xl font-light">({currentEspGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
                   <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['ES'] ? 'rotate-180' : ''}`}>expand_more</span>
                 </button>
@@ -623,7 +637,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentEspGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
                     </div>
                   ))}
                 </div>
@@ -637,8 +651,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   onClick={() => toggleCountry('US')}
                   className="group flex items-center gap-4 w-full text-left font-headline font-bold text-4xl py-6 hover:text-primary transition-all duration-300"
                 >
-                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">USA</span> 
-                  Estados Unidos 
+                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">USA</span>
+                  {lang === 'es' ? 'Estados Unidos' : 'United States'}
                   <span className="text-secondary/30 text-2xl font-light">({currentUsaGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
                   <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['US'] ? 'rotate-180' : ''}`}>expand_more</span>
                 </button>
@@ -646,7 +660,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentUsaGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
                     </div>
                   ))}
                 </div>
@@ -660,8 +674,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   onClick={() => toggleCountry('MX')}
                   className="group flex items-center gap-4 w-full text-left font-headline font-bold text-4xl py-6 hover:text-primary transition-all duration-300"
                 >
-                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span> 
-                  México 
+                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span>
+                  {lang === 'es' ? 'México' : 'Mexico'}
                   <span className="text-secondary/30 text-2xl font-light">({currentMexWinesGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
                   <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX'] ? 'rotate-180' : ''}`}>expand_more</span>
                 </button>
@@ -669,7 +683,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentMexWinesGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
                     </div>
                   ))}
                 </div>
@@ -683,8 +697,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   onClick={() => toggleCountry('MX_DEST')}
                   className="group flex items-center gap-4 w-full text-left font-headline font-bold text-4xl py-6 hover:text-primary transition-all duration-300"
                 >
-                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span> 
-                  Destilados México 
+                  <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span>
+                  {lang === 'es' ? 'Destilados México' : 'Mexican Spirits'}
                   <span className="text-secondary/30 text-2xl font-light">({currentMexDestiladosGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
                   <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX_DEST'] ? 'rotate-180' : ''}`}>expand_more</span>
                 </button>
@@ -692,7 +706,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentMexDestiladosGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
                     </div>
                   ))}
                 </div>
@@ -706,7 +720,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
         <section id="distribuidores" className="py-20 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-16">
-              <span className="font-label text-primary tracking-[0.3em] text-[10px] font-bold mb-6 block uppercase">Red Comercial</span>
+              <span className="font-label text-primary tracking-[0.3em] text-[10px] font-bold mb-6 block uppercase">{lang === 'es' ? 'Red Comercial' : 'Commercial Network'}</span>
               <h2 className="font-headline font-bold text-5xl text-secondary mb-6 italic">{t.distribuidores.title}</h2>
               <p className="text-on-surface-variant max-w-2xl mx-auto text-lg">{t.distribuidores.desc}</p>
             </div>
@@ -764,43 +778,43 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-secondary font-bold tracking-widest uppercase text-[10px] mb-2">{t.cta.fContactName} <span className="text-primary">*</span></label>
-                      <input type="text" name="Nombre" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder="Ej. Juan Pérez" required />
+                      <input type="text" name="Nombre" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder={lang === 'es' ? 'Ej. Juan Pérez' : 'E.g. John Smith'} required />
                     </div>
                     <div>
                       <label className="block text-secondary font-bold tracking-widest uppercase text-[10px] mb-2">{t.cta.fCompany}</label>
-                      <input type="text" name="Empresa" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder="Ej. Vinos S.A. de C.V." />
+                      <input type="text" name="Empresa" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder={lang === 'es' ? 'Ej. Vinos S.A. de C.V.' : 'E.g. Fine Wines Inc.'} />
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-secondary font-bold tracking-widest uppercase text-[10px] mb-2">{t.cta.fLocation}</label>
-                      <input type="text" name="Ubicacion" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder="Ej. Monterrey, NL" />
+                      <input type="text" name="Ubicacion" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder={lang === 'es' ? 'Ej. Monterrey, NL' : 'E.g. Monterrey, NL'} />
                     </div>
                     <div>
                       <label className="block text-secondary font-bold tracking-widest uppercase text-[10px] mb-2">{t.cta.fPhone} <span className="text-primary">*</span></label>
-                      <input type="tel" name="Teléfono" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder="Ej. 55 1234 5678" required />
+                      <input type="tel" name="Teléfono" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder={lang === 'es' ? 'Ej. 55 1234 5678' : 'E.g. 55 1234 5678'} required />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-secondary font-bold tracking-widest uppercase text-[10px] mb-2">{t.cta.fEmail} <span className="text-primary">*</span></label>
-                    <input type="email" name="Correo" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder="contacto@tuempresa.com" required />
+                    <input type="email" name="Correo" className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary placeholder-black/20" placeholder={lang === 'es' ? 'contacto@tuempresa.com' : 'contact@yourcompany.com'} required />
                   </div>
                   
                   <div>
                     <label className="block text-secondary font-bold tracking-widest uppercase text-[10px] mb-2">{t.cta.fMsg}</label>
-                    <textarea name="Mensaje" rows={2} className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary resize-none placeholder-black/20" placeholder="Háblanos sobre tu capacidad de distribución y zonas de interés..."></textarea>
+                    <textarea name="Mensaje" rows={2} className="w-full border-b border-black/20 pb-3 focus:outline-none focus:border-primary transition-colors bg-transparent text-secondary resize-none placeholder-black/20" placeholder={lang === 'es' ? 'Háblanos sobre tu capacidad de distribución y zonas de interés...' : 'Tell us about your distribution capacity and areas of interest...'}></textarea>
                   </div>
                   
                   <button type="submit" disabled={formState === 'loading' || formState === 'success'} className="bg-black text-white px-8 py-5 mt-2 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-primary transition-all w-fit flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
-                    {formState === 'loading' ? 'Enviando...' : formState === 'success' ? '¡Enviado!' : t.cta.c2Btn}
+                    {formState === 'loading' ? (lang === 'es' ? 'Enviando...' : 'Sending...') : formState === 'success' ? (lang === 'es' ? '¡Enviado!' : 'Sent!') : t.cta.c2Btn}
                     {formState === 'idle' && <span className="material-symbols-outlined text-sm">send</span>}
                     {formState === 'success' && <span className="material-symbols-outlined text-sm">check_circle</span>}
                   </button>
 
                   {formState === 'error' && (
-                    <span className="text-primary text-xs font-bold mt-2 font-label uppercase">Hubo un error, por favor intenta nuevamente.</span>
+                    <span className="text-primary text-xs font-bold mt-2 font-label uppercase">{lang === 'es' ? 'Hubo un error, por favor intenta nuevamente.' : 'Something went wrong, please try again.'}</span>
                   )}
                 </form>
                 <img src="/logo.png" alt="HB Imports México" className="absolute bottom-10 right-10 w-24 md:w-32 opacity-20 pointer-events-none mix-blend-multiply" />

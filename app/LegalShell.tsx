@@ -27,6 +27,10 @@ export default function LegalShell({ content }: { content: { es: LegalContent; e
     } catch {}
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   const switchLang = (l: 'es' | 'en') => {
     setLang(l);
     try { window.localStorage.setItem('hb_lang', l); } catch {}
