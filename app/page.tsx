@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { translations } from './translations';
 import winesData from './wines.json';
 import GlobeMap from './GlobeMap';
+import AgeGate from './AgeGate';
 
 const argWines = winesData.filter(w => w.badge === 'ARG');
 const usaWines = winesData.filter(w => w.badge === 'USA');
@@ -307,6 +308,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
 
   return (
     <>
+      <AgeGate lang={lang} />
+
       {/* TopNavBar - Modern Floating Pill Style */}
       <nav className="fixed top-2 left-2 right-2 md:top-4 md:left-4 md:right-4 z-50 bg-white/95 backdrop-blur-xl border border-gray-100/50 shadow-lg rounded-3xl transition-all duration-500 max-w-7xl md:mx-auto">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8 h-20">

@@ -144,6 +144,17 @@ export const translations = {
       nlPh: "Tu correo electrónico",
       copyright: "© 2024 HB Imports MX. Evita el exceso.",
       createdBy: "Sitio web creado por",
+    },
+    ageGate: {
+      brand: "Importadora de Vinos y Destilados",
+      title: "¿Eres mayor de edad?",
+      desc: "Este sitio presenta bebidas alcohólicas. Para continuar, confirma que tienes al menos 18 años.",
+      yes: "Sí, soy mayor de 18",
+      no: "No",
+      deniedTitle: "Gracias por tu visita",
+      deniedDesc: "Lo sentimos: el contenido de este sitio es exclusivo para mayores de edad. Te esperamos cuando cumplas 18 años.",
+      back: "Volver",
+      legal: "Evita el exceso. El abuso en el consumo de este producto es nocivo para la salud.",
     }
   },
   en: {
@@ -291,6 +302,17 @@ export const translations = {
       nlPh: "Your email address",
       copyright: "© 2024 HB Imports MX. Drink responsibly.",
       createdBy: "Website created by",
+    },
+    ageGate: {
+      brand: "Wine & Spirits Importer",
+      title: "Are you of legal drinking age?",
+      desc: "This site features alcoholic beverages. To continue, please confirm that you are at least 18 years old.",
+      yes: "Yes, I am over 18",
+      no: "No",
+      deniedTitle: "Thank you for visiting",
+      deniedDesc: "We're sorry: this site's content is intended for adults only. We'll be glad to welcome you once you are of legal age.",
+      back: "Go back",
+      legal: "Drink responsibly.",
     }
   }
 };
