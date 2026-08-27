@@ -25,7 +25,7 @@ export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
         </div>
         <div className="md:col-span-4 grid grid-cols-2 gap-8">
           <div className="flex flex-col gap-6">
-            <h5 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em]">{t.footer.navTitle}</h5>
+            <h3 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em]">{t.footer.navTitle}</h3>
             <nav className="flex flex-col gap-4 text-xs font-bold uppercase tracking-widest">
               <a className="hover:text-primary transition-colors" href="/#marcas">{t.nav.brands}</a>
               <a className="hover:text-primary transition-colors" href="/#contacto">{t.nav.contact}</a>
@@ -33,7 +33,7 @@ export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
             </nav>
           </div>
           <div className="flex flex-col gap-6">
-            <h5 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em]">{t.footer.legalTitle}</h5>
+            <h3 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em]">{t.footer.legalTitle}</h3>
             <nav className="flex flex-col gap-4 text-xs font-bold uppercase tracking-widest">
               <a className="hover:text-primary transition-colors" href="/aviso-de-privacidad">{t.footer.l1}</a>
               <a className="hover:text-primary transition-colors" href="/terminos-de-servicio">{t.footer.l2}</a>
@@ -43,7 +43,7 @@ export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
         </div>
         {NEWSLETTER_ENABLED && (
           <div className="md:col-span-3">
-            <h5 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8">{t.footer.nlTitle}</h5>
+            <h3 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8">{t.footer.nlTitle}</h3>
             <div className="flex border-b-2 border-black pb-4">
               <input
                 className="bg-transparent border-none focus:ring-0 w-full text-secondary placeholder-secondary/30 font-bold text-xs uppercase tracking-widest outline-none"
@@ -56,7 +56,7 @@ export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
         )}
         {!NEWSLETTER_ENABLED && (
           <div className="md:col-span-3">
-            <h5 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8">{t.nav.contact}</h5>
+            <h3 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8">{t.nav.contact}</h3>
             <a
               href="mailto:raulrivas@hbimports.mx"
               className="text-secondary font-bold text-sm tracking-wide underline underline-offset-4 hover:text-primary transition-colors break-all"

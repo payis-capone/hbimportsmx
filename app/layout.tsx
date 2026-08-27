@@ -22,9 +22,14 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hbimports.mx"),
   title: "HB Imports MX | Importador de Vinos en México - España, Argentina, USA",
   description: "HB Imports MX: importador y distribuidor oficial de vinos premium en México. Bodegas de Rioja, Ribera del Duero, Mendoza, California y más. Red nacional de distribuidores.",
   openGraph: {
+    type: "website",
+    siteName: "HB Imports MX",
+    locale: "es_MX",
+    url: "https://hbimports.mx",
     images: [
       {
         url: "https://hbimports.mx/og-white.jpg",
@@ -81,10 +86,9 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 "addressCountry": "MX"
               },
+              "email": "raulrivas@hbimports.mx",
               "sameAs": [
-                "URL_de_tu_Instagram",
-                "URL_de_tu_Facebook",
-                "URL_de_tu_LinkedIn"
+                "https://www.instagram.com/hbimportsmx"
               ]
             })
           }}

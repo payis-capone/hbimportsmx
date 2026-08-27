@@ -88,9 +88,9 @@ export default function AgeGate({ lang }: { lang: 'es' | 'en' }) {
 
           {status === 'ask' ? (
             <>
-              <h1 id="age-gate-title" className="font-headline font-bold text-4xl md:text-5xl italic mb-6 text-secondary">
+              <h2 id="age-gate-title" className="font-headline font-bold text-4xl md:text-5xl italic mb-6 text-secondary">
                 {t.title}
-              </h1>
+              </h2>
               <p className="font-body text-on-surface-variant leading-relaxed mb-10">{t.desc}</p>
               <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
                 <button
@@ -110,9 +110,9 @@ export default function AgeGate({ lang }: { lang: 'es' | 'en' }) {
             </>
           ) : (
             <>
-              <h1 id="age-gate-title" className="font-headline font-bold text-4xl md:text-5xl italic mb-6 text-secondary">
+              <h2 id="age-gate-title" className="font-headline font-bold text-4xl md:text-5xl italic mb-6 text-secondary">
                 {t.deniedTitle}
-              </h1>
+              </h2>
               <p className="font-body text-on-surface-variant leading-relaxed mb-10">{t.deniedDesc}</p>
               <button
                 ref={backRef}
