@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { translations } from './translations';
 import winesData from './wines.json';
 import GlobeMap from './GlobeMap';
+import Icon from './Icon';
 import AgeGate from './AgeGate';
 import SiteFooter from './SiteFooter';
 
@@ -182,7 +183,7 @@ const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string,
 
             <div className="flex items-center justify-between mt-auto relative">
               <a href={wine.techsheet || '#'} target="_blank" rel="noopener noreferrer" className={`text-secondary font-bold tracking-widest uppercase text-[10px] border-b-2 border-primary pb-1 transition-colors inline-flex items-center gap-2 ${wine.techsheet ? 'group-hover:text-primary' : 'opacity-30 cursor-not-allowed pointer-events-none'}`}>
-                {tBuyBtn} <span className="material-symbols-outlined text-[12px]">download</span>
+                {tBuyBtn} <Icon name="download" className="text-[12px]" />
               </a>
 
               {wine.techsheets && wine.techsheets.length > 0 && (
@@ -197,7 +198,7 @@ const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string,
                     className="text-secondary hover:text-primary transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-100"
                     title={lang === 'es' ? 'Ver más añadas y fichas técnicas' : 'See more vintages and tech sheets'}
                   >
-                    <span className="material-symbols-outlined text-[18px]">more_horiz</span>
+                    <Icon name="more_horiz" className="text-[18px]" />
                   </button>
                   
                   {openDropdown === index && (
@@ -236,7 +237,7 @@ const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string,
         aria-label="Scroll Left"
         className="absolute left-2 md:left-4 top-[35%] -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-black/5 flex items-center justify-center text-secondary hover:bg-primary hover:text-white hover:scale-110 transition-all opacity-0 group-hover/carousel:opacity-100 pointer-events-none group-hover/carousel:pointer-events-auto cursor-pointer"
       >
-        <span className="material-symbols-outlined font-bold">chevron_left</span>
+        <Icon name="chevron_left" className="font-bold" />
       </button>
 
       {wines.length > 2 && (
@@ -245,7 +246,7 @@ const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string,
           aria-label="Scroll Right"
           className="absolute right-2 md:right-4 top-[35%] -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-black/5 flex items-center justify-center text-primary bg-primary/5 hover:bg-primary hover:text-white hover:scale-110 transition-all opacity-70 group-hover/carousel:opacity-100 cursor-pointer animate-pulse-slow"
         >
-          <span className="material-symbols-outlined font-bold">chevron_right</span>
+          <Icon name="chevron_right" className="font-bold" />
         </button>
       )}
     </div>
@@ -397,7 +398,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 }} 
                 className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors ${isSearchOpen ? 'text-primary bg-primary/10' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'}`}
               >
-                <span className="material-symbols-outlined text-[20px]">{isSearchOpen && searchQuery ? 'arrow_forward' : 'search'}</span>
+                <Icon name={isSearchOpen && searchQuery ? 'arrow_forward' : 'search'} className="text-[20px]" />
               </button>
               {isSearchOpen && (
                 <button onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }} className="absolute -bottom-8 right-2 text-[9px] text-gray-400 font-bold uppercase tracking-widest hover:text-primary">
@@ -407,7 +408,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
             </div>
             {/* Mobile Menu Toggle */}
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-full transition-colors lg:hidden">
-              <span className="material-symbols-outlined text-[24px]">{isMenuOpen ? 'close' : 'menu'}</span>
+              <Icon name={isMenuOpen ? 'close' : 'menu'} className="text-[24px]" />
             </button>
           </div>
         </div>
@@ -488,7 +489,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 {t.brands.desc && <p className="text-on-surface-variant leading-relaxed text-lg">{t.brands.desc}</p>}
               </div>
               <a className="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2 border-b-2 border-primary/20 pb-1 hover:border-primary transition-all" href="#">
-                {t.brands.viewAll} <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                {t.brands.viewAll} <Icon name="arrow_forward" className="text-sm" />
               </a>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
@@ -509,7 +510,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   alt="12 Linajes Hispano Bodegas Instagram Photo"
                 />
                 <div className="absolute inset-0 z-20 bg-gradient-to-r from-black/95 via-black/80 to-transparent p-6 md:p-12 flex flex-col justify-center pointer-events-none">
-                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b2Country}</span>
+                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><Icon name="open_in_new" className="text-xs" /> {t.brands.b2Country}</span>
                   <h3 className="text-white font-headline font-bold text-4xl md:text-5xl mb-4 group-hover:text-primary transition-colors leading-tight break-words" style={{ textShadow: '0px 4px 16px rgba(0,0,0,0.9)' }}>{t.brands.b2Brand}</h3>
                   {t.brands.b2Desc && <p className="text-white/80 max-w-sm leading-relaxed text-lg italic opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">{t.brands.b2Desc}</p>}
                 </div>
@@ -530,7 +531,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10 pointer-events-none"></div>
 
                 <div className="absolute inset-0 p-10 flex flex-col justify-end z-40 pointer-events-none">
-                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b3Country}</span>
+                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><Icon name="open_in_new" className="text-xs" /> {t.brands.b3Country}</span>
                   <h3 className="text-white font-headline font-bold text-3xl group-hover:text-primary transition-colors" style={{ textShadow: '0px 4px 16px rgba(0,0,0,0.9)' }}>{t.brands.b3Brand}</h3>
                 </div>
               </a>
@@ -547,7 +548,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   alt="Lapis Luna Beautiful Artwork"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent p-10 flex flex-col justify-end">
-                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b4Country}</span>
+                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><Icon name="open_in_new" className="text-xs" /> {t.brands.b4Country}</span>
                   <h3 className="text-white font-headline font-bold text-3xl group-hover:text-primary transition-colors">{t.brands.b4Brand}</h3>
                 </div>
               </a>
@@ -564,7 +565,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                    alt="Pascual Toso Mendoza Vineyard"
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent p-10 flex flex-col justify-end">
-                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><span className="material-symbols-outlined text-xs">open_in_new</span> {t.brands.b1Country}</span>
+                  <span className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-[0.3em] mb-2 uppercase"><Icon name="open_in_new" className="text-xs" /> {t.brands.b1Country}</span>
                   <h3 className="text-white font-headline font-bold text-3xl mb-2 flex items-center gap-2 group-hover:text-primary transition-colors">{t.brands.b1Brand}</h3>
                   {t.brands.b1Desc && <p className="text-white/80 max-w-md text-sm opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">{t.brands.b1Desc}</p>}
                 </div>
@@ -608,7 +609,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">AR</span> 
                   Argentina 
                   <span className="text-secondary/30 text-2xl font-light">({currentArgGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
-                  <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['AR'] ? 'rotate-180' : ''}`}>expand_more</span>
+                  <Icon name="expand_more" className={`ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['AR'] ? 'rotate-180' : ''}`} />
                 </button>
                 <div className={`transition-all duration-700 ease-in-out overflow-hidden ${expandedCountries['AR'] ? 'max-h-[10000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                   {currentArgGroups.map(g => (
@@ -631,7 +632,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">ESP</span>
                   {lang === 'es' ? 'España' : 'Spain'}
                   <span className="text-secondary/30 text-2xl font-light">({currentEspGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
-                  <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['ES'] ? 'rotate-180' : ''}`}>expand_more</span>
+                  <Icon name="expand_more" className={`ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['ES'] ? 'rotate-180' : ''}`} />
                 </button>
                 <div className={`transition-all duration-700 ease-in-out overflow-hidden ${expandedCountries['ES'] ? 'max-h-[10000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                   {currentEspGroups.map(g => (
@@ -654,7 +655,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">USA</span>
                   {lang === 'es' ? 'Estados Unidos' : 'United States'}
                   <span className="text-secondary/30 text-2xl font-light">({currentUsaGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
-                  <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['US'] ? 'rotate-180' : ''}`}>expand_more</span>
+                  <Icon name="expand_more" className={`ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['US'] ? 'rotate-180' : ''}`} />
                 </button>
                 <div className={`transition-all duration-700 ease-in-out overflow-hidden ${expandedCountries['US'] ? 'max-h-[10000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                   {currentUsaGroups.map(g => (
@@ -677,7 +678,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span>
                   {lang === 'es' ? 'México' : 'Mexico'}
                   <span className="text-secondary/30 text-2xl font-light">({currentMexWinesGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
-                  <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX'] ? 'rotate-180' : ''}`}>expand_more</span>
+                  <Icon name="expand_more" className={`ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX'] ? 'rotate-180' : ''}`} />
                 </button>
                 <div className={`transition-all duration-700 ease-in-out overflow-hidden ${expandedCountries['MX'] ? 'max-h-[10000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                   {currentMexWinesGroups.map(g => (
@@ -700,7 +701,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   <span className="font-label text-xl tracking-[0.2em] text-primary transition-colors">MEX</span>
                   {lang === 'es' ? 'Destilados México' : 'Mexican Spirits'}
                   <span className="text-secondary/30 text-2xl font-light">({currentMexDestiladosGroups.reduce((acc, g) => acc + g.wines.length, 0)})</span>
-                  <span className={`material-symbols-outlined ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX_DEST'] ? 'rotate-180' : ''}`}>expand_more</span>
+                  <Icon name="expand_more" className={`ml-auto text-3xl transition-transform duration-500 text-secondary/40 group-hover:text-primary ${expandedCountries['MX_DEST'] ? 'rotate-180' : ''}`} />
                 </button>
                 <div className={`transition-all duration-700 ease-in-out overflow-hidden ${expandedCountries['MX_DEST'] ? 'max-h-[10000px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                   {currentMexDestiladosGroups.map(g => (
@@ -749,12 +750,12 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                       </div>
                     ) : (
                       <div className="w-20 h-20 flex items-center justify-center bg-black/5 rounded-full flex-shrink-0">
-                         <span className="material-symbols-outlined text-black/30 text-[32px]">store</span>
+                         <Icon name="store" className="text-black/30 text-[32px]" />
                       </div>
                     )}
                     <h3 className={`font-headline font-bold text-xl text-secondary transition-colors ${isLink ? 'group-hover:text-primary' : ''}`}>{dist.name}</h3>
                   </div>
-                  {isLink && <span className="material-symbols-outlined text-black/20 group-hover:text-primary transition-colors text-[18px]">open_in_new</span>}
+                  {isLink && <Icon name="open_in_new" className="text-black/20 group-hover:text-primary transition-colors text-[18px]" />}
                 </Wrapper>
               )})}
             </div>
@@ -767,7 +768,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
             <div className="bg-white grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden shadow-2xl rounded-3xl" id="contacto">
               {/* Información Distribuidores */}
               <div className="p-10 md:p-20 bg-primary flex flex-col justify-center min-h-[350px]">
-                <span className="material-symbols-outlined text-white/50 text-5xl mb-8">handshake</span>
+                <Icon name="handshake" className="text-white/50 text-5xl mb-8" />
                 <h4 className="font-headline font-bold text-4xl md:text-5xl text-white mb-6 leading-tight italic">{t.cta.c2Title}</h4>
                 <p className="text-white/90 text-lg md:text-xl max-w-md leading-relaxed">{t.cta.c2Desc}</p>
               </div>
@@ -809,8 +810,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   
                   <button type="submit" disabled={formState === 'loading' || formState === 'success'} className="bg-black text-white px-8 py-5 mt-2 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-primary transition-all w-fit flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
                     {formState === 'loading' ? (lang === 'es' ? 'Enviando...' : 'Sending...') : formState === 'success' ? (lang === 'es' ? '¡Enviado!' : 'Sent!') : t.cta.c2Btn}
-                    {formState === 'idle' && <span className="material-symbols-outlined text-sm">send</span>}
-                    {formState === 'success' && <span className="material-symbols-outlined text-sm">check_circle</span>}
+                    {formState === 'idle' && <Icon name="send" className="text-sm" />}
+                    {formState === 'success' && <Icon name="check_circle" className="text-sm" />}
                   </button>
 
                   {formState === 'error' && (
@@ -847,15 +848,15 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 </p>
                 <ul className="space-y-6 mb-12">
                   <li className="flex items-center gap-5 text-secondary">
-                    <span className="material-symbols-outlined text-primary font-bold">verified</span>
+                    <Icon name="verified" className="text-primary font-bold" />
                     <span className="font-bold tracking-tight uppercase text-xs">{t.story.f1}</span>
                   </li>
                   <li className="flex items-center gap-5 text-secondary">
-                    <span className="material-symbols-outlined text-primary font-bold">thermostat</span>
+                    <Icon name="thermostat" className="text-primary font-bold" />
                     <span className="font-bold tracking-tight uppercase text-xs">{t.story.f2}</span>
                   </li>
                   <li className="flex items-center gap-5 text-secondary">
-                    <span className="material-symbols-outlined text-primary font-bold">handshake</span>
+                    <Icon name="handshake" className="text-primary font-bold" />
                     <span className="font-bold tracking-tight uppercase text-xs">{t.story.f3}</span>
                   </li>
                 </ul>

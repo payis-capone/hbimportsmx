@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
+import Icon from './Icon';
 
 const Globe = dynamic(() => import("react-globe.gl"), { ssr: false });
 
@@ -112,7 +113,7 @@ export default function GlobeMap() {
           onClick={handleReset}
           className="absolute top-4 lg:top-8 left-4 lg:left-8 z-20 bg-primary text-white px-6 py-3 rounded-full font-bold text-[10px] md:text-xs tracking-widest uppercase shadow-2xl hover:bg-white hover:text-primary transition-all border border-transparent flex items-center gap-2"
         >
-          <span className="material-symbols-outlined text-sm md:text-base">arrow_back</span> Volver al mundo
+          <Icon name="arrow_back" className="text-sm md:text-base" /> Volver al mundo
         </button>
       )}
 

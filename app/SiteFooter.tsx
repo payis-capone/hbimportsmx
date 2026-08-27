@@ -1,6 +1,7 @@
 "use client";
 
 import { translations } from './translations';
+import Icon from './Icon';
 
 export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
   const t = translations[lang];
@@ -43,7 +44,7 @@ export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
               placeholder={t.footer.nlPh}
               type="email"
             />
-            <button className="material-symbols-outlined text-primary font-bold">east</button>
+            <button className="text-primary font-bold" aria-label={lang === 'es' ? 'Suscribirse' : 'Subscribe'}><Icon name="east" /></button>
           </div>
         </div>
       </div>
@@ -52,8 +53,15 @@ export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
           © <span suppressHydrationWarning>{new Date().getFullYear()}</span> {t.footer.copyright}
         </span>
         <div className="flex gap-10">
-          <span className="material-symbols-outlined text-secondary hover:text-primary transition-colors cursor-pointer">brand_awareness</span>
-          <span className="material-symbols-outlined text-secondary hover:text-primary transition-colors cursor-pointer">social_distance</span>
+          <a
+            href="https://www.instagram.com/hbimportsmx"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="text-secondary hover:text-primary transition-colors text-xl"
+          >
+            <Icon name="instagram" />
+          </a>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-8 mt-10 flex justify-center items-center gap-3">
