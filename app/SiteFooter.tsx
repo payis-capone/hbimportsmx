@@ -3,6 +3,11 @@
 import { translations } from './translations';
 import Icon from './Icon';
 
+// ── Newsletter del footer: DESACTIVADO por decisión del cliente ──
+// El campo no tenía ningún backend: aceptaba correos que no llegaban a nadie.
+// Para reactivarlo hay que conectarlo a un servicio real y cambiar este flag a true.
+const NEWSLETTER_ENABLED = false;
+
 export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
   const t = translations[lang];
   return (
@@ -36,17 +41,30 @@ export default function SiteFooter({ lang }: { lang: 'es' | 'en' }) {
             </nav>
           </div>
         </div>
-        <div className="md:col-span-3">
-          <h5 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8">{t.footer.nlTitle}</h5>
-          <div className="flex border-b-2 border-black pb-4">
-            <input
-              className="bg-transparent border-none focus:ring-0 w-full text-secondary placeholder-secondary/30 font-bold text-xs uppercase tracking-widest outline-none"
-              placeholder={t.footer.nlPh}
-              type="email"
-            />
-            <button className="text-primary font-bold" aria-label={lang === 'es' ? 'Suscribirse' : 'Subscribe'}><Icon name="east" /></button>
+        {NEWSLETTER_ENABLED && (
+          <div className="md:col-span-3">
+            <h5 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8">{t.footer.nlTitle}</h5>
+            <div className="flex border-b-2 border-black pb-4">
+              <input
+                className="bg-transparent border-none focus:ring-0 w-full text-secondary placeholder-secondary/30 font-bold text-xs uppercase tracking-widest outline-none"
+                placeholder={t.footer.nlPh}
+                type="email"
+              />
+              <button className="text-primary font-bold" aria-label={lang === 'es' ? 'Suscribirse' : 'Subscribe'}><Icon name="east" /></button>
+            </div>
           </div>
-        </div>
+        )}
+        {!NEWSLETTER_ENABLED && (
+          <div className="md:col-span-3">
+            <h5 className="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8">{t.nav.contact}</h5>
+            <a
+              href="mailto:raulrivas@hbimports.mx"
+              className="text-secondary font-bold text-sm tracking-wide underline underline-offset-4 hover:text-primary transition-colors break-all"
+            >
+              raulrivas@hbimports.mx
+            </a>
+          </div>
+        )}
       </div>
       <div className="max-w-7xl mx-auto px-8 mt-24 pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8">
         <span className="text-on-surface-variant text-[10px] font-bold uppercase tracking-[0.2em]">

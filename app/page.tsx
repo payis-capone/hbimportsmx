@@ -9,8 +9,14 @@ import { trackEvent } from './analytics';
 import AgeGate from './AgeGate';
 import SiteFooter from './SiteFooter';
 
-// Clave pública de Web3Forms para leads de fichas técnicas.
-// Con el placeholder, el envío del lead falla en silencio y la descarga nunca se bloquea.
+// ── Captura de leads en descargas de fichas: DESACTIVADA por decisión del cliente ──
+// Sin una access key real de Web3Forms los correos capturados no llegan a nadie,
+// así que no se le piden datos al usuario. Para reactivar el mini-modal:
+//   1. Conseguir la access key en web3forms.com (llega al correo del dueño).
+//   2. Pegarla en WEB3FORMS_ACCESS_KEY.
+//   3. Cambiar LEAD_CAPTURE_ENABLED a true.
+// El evento de analítica ficha_download NO depende de este flag y sigue activo.
+const LEAD_CAPTURE_ENABLED = false;
 const WEB3FORMS_ACCESS_KEY = "[PEGAR_KEY_NUEVA_DE_HB]";
 
 const argWines = winesData.filter(w => w.badge === 'ARG');
@@ -313,6 +319,11 @@ export default function Home() {
   };
 
   const handleFichaClick = (e: React.MouseEvent, wine: string, url: string) => {
+    if (!LEAD_CAPTURE_ENABLED) {
+      // Descarga directa: solo se registra el evento de analítica
+      registerFichaDownload(wine, url);
+      return;
+    }
     let skipModal = false;
     try {
       skipModal = !!(window.localStorage.getItem('hb_lead_email') || window.sessionStorage.getItem('hb_lead_skip'));
@@ -406,8 +417,8 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
     <>
       <AgeGate lang={lang} />
 
-      {/* Mini-modal opcional de lead al descargar fichas */}
-      {leadPrompt && (
+      {/* Mini-modal opcional de lead al descargar fichas (inactivo mientras LEAD_CAPTURE_ENABLED = false) */}
+      {LEAD_CAPTURE_ENABLED && leadPrompt && (
         <div
           className="fixed inset-0 z-[900] bg-black/50 backdrop-blur-sm flex items-center justify-center px-6"
           onClick={() => setLeadPrompt(null)}
@@ -886,6 +897,10 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                 <Icon name="handshake" className="text-white/50 text-5xl mb-8" />
                 <h4 className="font-headline font-bold text-4xl md:text-5xl text-white mb-6 leading-tight italic">{t.cta.c2Title}</h4>
                 <p className="text-white/90 text-lg md:text-xl max-w-md leading-relaxed">{t.cta.c2Desc}</p>
+                <p className="text-white/80 text-sm mt-8 tracking-wide">
+                  {lang === 'es' ? 'O escríbenos directo:' : 'Or email us directly:'}{' '}
+                  <a href="mailto:raulrivas@hbimports.mx" className="text-white font-bold underline underline-offset-4 hover:text-white/70 transition-colors break-all">raulrivas@hbimports.mx</a>
+                </p>
               </div>
 
               {/* Formulario */}
