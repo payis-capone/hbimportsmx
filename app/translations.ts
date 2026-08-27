@@ -133,6 +133,14 @@ export const translations = {
       fEmail: "Correo electrónico",
       fMsg: "Mensaje",
     },
+    leadModal: {
+      title: "¿Quieres que te contactemos?",
+      desc: "Deja tu correo y un asesor te buscará. Es opcional: la ficha se descarga igual.",
+      ph: "tucorreo@empresa.com",
+      only: "Solo descargar",
+      send: "Enviar y descargar",
+      invalid: "Escribe un correo válido o elige \"Solo descargar\".",
+    },
     footer: {
       desc: "Importando y distribuyendo los vinos más representativos del mundo para México. Elevando el estándar en cada botella.",
       navTitle: "Navegación",
@@ -290,6 +298,14 @@ export const translations = {
       fPhone: "Phone Number",
       fEmail: "Email Address",
       fMsg: "Message",
+    },
+    leadModal: {
+      title: "Want us to contact you?",
+      desc: "Leave your email and an advisor will reach out. It's optional: the sheet downloads either way.",
+      ph: "you@company.com",
+      only: "Just download",
+      send: "Send & download",
+      invalid: "Enter a valid email or choose \"Just download\".",
     },
     footer: {
       desc: "Importing and distributing the most representative wines of the world for Mexico. Elevating the standard in every bottle.",

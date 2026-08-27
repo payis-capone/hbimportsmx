@@ -5,8 +5,13 @@ import { translations } from './translations';
 import winesData from './wines.json';
 import GlobeMap from './GlobeMap';
 import Icon from './Icon';
+import { trackEvent } from './analytics';
 import AgeGate from './AgeGate';
 import SiteFooter from './SiteFooter';
+
+// Clave pública de Web3Forms para leads de fichas técnicas.
+// Con el placeholder, el envío del lead falla en silencio y la descarga nunca se bloquea.
+const WEB3FORMS_ACCESS_KEY = "[PEGAR_KEY_NUEVA_DE_HB]";
 
 const argWines = winesData.filter(w => w.badge === 'ARG');
 const usaWines = winesData.filter(w => w.badge === 'USA');
@@ -134,7 +139,9 @@ const countryEn: Record<string, string> = {
 const trType = (type: string, lang: 'es' | 'en') => (lang === 'en' ? (typeEn[type] || type) : type);
 const trCountry = (country: string, lang: 'es' | 'en') => (lang === 'en' ? (countryEn[country] || country) : country);
 
-const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string, lang: 'es' | 'en' }) => {
+type FichaClickHandler = (e: React.MouseEvent, wine: string, url: string) => void;
+
+const WineCarousel = ({ wines, tBuyBtn, lang, onFichaClick }: { wines: any[], tBuyBtn: string, lang: 'es' | 'en', onFichaClick: FichaClickHandler }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
@@ -163,7 +170,7 @@ const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string,
       <div ref={scrollRef} className="flex overflow-x-auto snap-x snap-proximity gap-6 pb-8 custom-scrollbar">
         {wines.map((wine: any, index: number) => (
           <div key={index} className="group flex flex-col h-full w-[180px] md:w-[220px] snap-start shrink-0">
-            <a href={wine.techsheet || undefined} target={wine.techsheet ? "_blank" : undefined} rel="noopener noreferrer" className={`block aspect-[3/4] bg-white mb-4 flex items-center justify-center p-4 transition-all duration-500 relative border border-black/5 rounded-3xl group-hover:-translate-y-2 group-hover:shadow-xl ${wine.techsheet ? 'cursor-pointer' : 'cursor-default'}`}>
+            <a href={wine.techsheet || undefined} target={wine.techsheet ? "_blank" : undefined} rel="noopener noreferrer" onClick={(e) => wine.techsheet && onFichaClick(e, wine.name, wine.techsheet)} className={`block aspect-[3/4] bg-white mb-4 flex items-center justify-center p-4 transition-all duration-500 relative border border-black/5 rounded-3xl group-hover:-translate-y-2 group-hover:shadow-xl ${wine.techsheet ? 'cursor-pointer' : 'cursor-default'}`}>
               <div className="absolute top-4 left-4 flex w-6 h-4 shadow-md border border-black/10 rounded-[1px] overflow-hidden bg-gray-100 z-10">
                 <img src={getFlagUrl(wine.badge)} title={wine.badge} alt={wine.badge} className="w-full h-full object-cover" />
               </div>
@@ -177,12 +184,12 @@ const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string,
                 </span>
               )}
             </div>
-            <a href={wine.techsheet || undefined} target={wine.techsheet ? "_blank" : undefined} rel="noopener noreferrer" className={wine.techsheet ? "cursor-pointer" : "cursor-default pointer-events-none"}>
+            <a href={wine.techsheet || undefined} target={wine.techsheet ? "_blank" : undefined} rel="noopener noreferrer" onClick={(e) => wine.techsheet && onFichaClick(e, wine.name, wine.techsheet)} className={wine.techsheet ? "cursor-pointer" : "cursor-default pointer-events-none"}>
               <h3 className={`font-headline font-bold text-lg mb-1 pr-2 leading-tight ${wine.techsheet ? 'group-hover:text-primary transition-colors' : 'text-secondary'}`}>{wine.name}</h3>
             </a>
 
             <div className="flex items-center justify-between mt-auto relative">
-              <a href={wine.techsheet || '#'} target="_blank" rel="noopener noreferrer" className={`text-secondary font-bold tracking-widest uppercase text-[10px] border-b-2 border-primary pb-1 transition-colors inline-flex items-center gap-2 ${wine.techsheet ? 'group-hover:text-primary' : 'opacity-30 cursor-not-allowed pointer-events-none'}`}>
+              <a href={wine.techsheet || '#'} target="_blank" rel="noopener noreferrer" onClick={(e) => wine.techsheet && onFichaClick(e, wine.name, wine.techsheet)} className={`text-secondary font-bold tracking-widest uppercase text-[10px] border-b-2 border-primary pb-1 transition-colors inline-flex items-center gap-2 ${wine.techsheet ? 'group-hover:text-primary' : 'opacity-30 cursor-not-allowed pointer-events-none'}`}>
                 {tBuyBtn} <Icon name="download" className="text-[12px]" />
               </a>
 
@@ -210,11 +217,12 @@ const WineCarousel = ({ wines, tBuyBtn, lang }: { wines: any[], tBuyBtn: string,
                         {wine.techsheets.map((ts: string, i: number) => {
                           const filename = decodeURIComponent(ts.split('/').pop() || 'Ficha ' + (i+1)).replace('.pdf', '');
                           return (
-                            <a 
-                              key={i} 
-                              href={ts} 
-                              target="_blank" 
+                            <a
+                              key={i}
+                              href={ts}
+                              target="_blank"
                               rel="noopener noreferrer"
+                              onClick={(e) => onFichaClick(e, wine.name, ts)}
                               className="px-4 py-3 text-xs text-secondary hover:bg-primary/5 hover:text-primary transition-colors block border-b border-gray-50 last:border-0 leading-relaxed"
                             >
                               {filename}
@@ -288,6 +296,67 @@ export default function Home() {
     setExpandedCountries(prev => ({ ...prev, [country]: !prev[country] }));
   };
 
+  // Lead opcional al descargar fichas técnicas
+  const [leadPrompt, setLeadPrompt] = useState<{ wine: string; url: string } | null>(null);
+  const [leadEmail, setLeadEmail] = useState('');
+  const [leadError, setLeadError] = useState(false);
+
+  useEffect(() => {
+    if (!leadPrompt) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setLeadPrompt(null); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [leadPrompt]);
+
+  const registerFichaDownload = (wine: string, url: string) => {
+    trackEvent('ficha_download', { wine, file: decodeURIComponent(url.split('/').pop() || '') });
+  };
+
+  const handleFichaClick = (e: React.MouseEvent, wine: string, url: string) => {
+    let skipModal = false;
+    try {
+      skipModal = !!(window.localStorage.getItem('hb_lead_email') || window.sessionStorage.getItem('hb_lead_skip'));
+    } catch {}
+    if (skipModal) {
+      registerFichaDownload(wine, url);
+      return; // el enlace abre el PDF normalmente
+    }
+    e.preventDefault();
+    setLeadEmail('');
+    setLeadError(false);
+    setLeadPrompt({ wine, url });
+  };
+
+  const finishFichaDownload = (sendLead: boolean) => {
+    if (!leadPrompt) return;
+    const email = leadEmail.trim();
+    if (sendLead && email) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setLeadError(true);
+        return;
+      }
+      try { window.localStorage.setItem('hb_lead_email', email); } catch {}
+      // Fire-and-forget: la descarga jamás espera ni depende de este envío
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Lead ficha técnica — ${leadPrompt.wine}`,
+          from_name: 'Sitio HB Imports',
+          replyto: email,
+          Correo: email,
+          Vino: leadPrompt.wine,
+        }),
+      }).catch(() => {});
+    } else {
+      try { window.sessionStorage.setItem('hb_lead_skip', '1'); } catch {}
+    }
+    registerFichaDownload(leadPrompt.wine, leadPrompt.url);
+    window.open(leadPrompt.url, '_blank', 'noopener');
+    setLeadPrompt(null);
+  };
+
   const filterGroups = (groups: any[]) => {
     if (!searchQuery) return groups;
     const sq = searchQuery.toLowerCase();
@@ -336,6 +405,52 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
   return (
     <>
       <AgeGate lang={lang} />
+
+      {/* Mini-modal opcional de lead al descargar fichas */}
+      {leadPrompt && (
+        <div
+          className="fixed inset-0 z-[900] bg-black/50 backdrop-blur-sm flex items-center justify-center px-6"
+          onClick={() => setLeadPrompt(null)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lead-modal-title"
+            className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 md:p-10 text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className="font-label text-[9px] text-primary font-bold tracking-[0.3em] uppercase mb-3 block">{leadPrompt.wine}</span>
+            <h3 id="lead-modal-title" className="font-headline font-bold text-2xl md:text-3xl italic text-secondary mb-3">{t.leadModal.title}</h3>
+            <p className="font-body text-on-surface-variant text-sm leading-relaxed mb-6">{t.leadModal.desc}</p>
+            <input
+              type="email"
+              autoFocus
+              value={leadEmail}
+              onChange={(e) => { setLeadEmail(e.target.value); setLeadError(false); }}
+              onKeyDown={(e) => { if (e.key === 'Enter') finishFichaDownload(true); }}
+              placeholder={t.leadModal.ph}
+              className="w-full border-b-2 border-black/15 focus:border-primary transition-colors pb-3 mb-2 text-center text-secondary placeholder-black/25 outline-none bg-transparent"
+            />
+            {leadError && (
+              <p className="text-primary text-[11px] font-bold uppercase tracking-wider mb-2" role="alert">{t.leadModal.invalid}</p>
+            )}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+              <button
+                onClick={() => finishFichaDownload(true)}
+                className="bg-[#B21F24] text-white font-bold tracking-widest uppercase text-[10px] px-6 py-4 rounded-full hover:bg-secondary transition-colors cursor-pointer"
+              >
+                {t.leadModal.send}
+              </button>
+              <button
+                onClick={() => finishFichaDownload(false)}
+                className="border-2 border-black/10 text-secondary font-bold tracking-widest uppercase text-[10px] px-6 py-4 rounded-full hover:border-secondary transition-colors cursor-pointer"
+              >
+                {t.leadModal.only}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* TopNavBar - Modern Floating Pill Style */}
       <nav className="fixed top-2 left-2 right-2 md:top-4 md:left-4 md:right-4 z-50 bg-white/95 backdrop-blur-xl border border-gray-100/50 shadow-lg rounded-3xl transition-all duration-500 max-w-7xl md:mx-auto">
@@ -615,7 +730,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentArgGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} onFichaClick={handleFichaClick} />
                     </div>
                   ))}
                 </div>
@@ -638,7 +753,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentEspGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} onFichaClick={handleFichaClick} />
                     </div>
                   ))}
                 </div>
@@ -661,7 +776,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentUsaGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} onFichaClick={handleFichaClick} />
                     </div>
                   ))}
                 </div>
@@ -684,7 +799,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentMexWinesGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} onFichaClick={handleFichaClick} />
                     </div>
                   ))}
                 </div>
@@ -707,7 +822,7 @@ Mensaje: ${data['Mensaje'] || 'N/A'}`;
                   {currentMexDestiladosGroups.map(g => (
                     <div key={g.group} className="mb-16">
                       <span className="font-label text-primary tracking-[0.2em] text-xs font-bold mb-4 block uppercase">— {g.group}</span>
-                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} />
+                      <WineCarousel wines={g.wines} tBuyBtn={t.wines.btnBuy} lang={lang} onFichaClick={handleFichaClick} />
                     </div>
                   ))}
                 </div>
