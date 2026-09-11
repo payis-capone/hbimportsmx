@@ -27,7 +27,7 @@ const mexWines = winesData.filter(w => w.badge === 'MEX');
 const argGroups = [
   { group: "Pascual Toso Estate", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();
-      return n.includes('PASCUAL TOSO') && !n.includes('RESERVE') && !n.includes('RESERVA') && !n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA') && !n.includes('135');
+      return n.includes('PASCUAL TOSO') && !n.includes('RESERVE') && !n.includes('RESERVA') && !n.includes('ALTA') && !n.includes('GRAN') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA') && !n.includes('135');
   }) },
   { group: "Pascual Toso Reserva", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();
@@ -36,6 +36,10 @@ const argGroups = [
   { group: "Pascual Toso Alta", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();
       return n.includes('PASCUAL TOSO') && n.includes('ALTA') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA') && !n.includes('135');
+  }) },
+  { group: "Pascual Toso Gran", wines: argWines.filter(w => {
+      const n = w.name.toUpperCase();
+      return n.includes('PASCUAL TOSO') && n.includes('GRAN') && !n.includes('PEDREGAL') && !n.includes('MAGDALENA') && !n.includes('135');
   }) },
   { group: "Pascual Toso PREMIUM (Finca Pedregal y Magdalena Toso)", wines: argWines.filter(w => {
       const n = w.name.toUpperCase();

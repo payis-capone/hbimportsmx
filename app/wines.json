@@ -769,6 +769,32 @@
   {
     "badge": "ARG",
     "country": "Mendoza",
+    "name": "PASCUAL TOSO GRAN SYRAH 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "#",
+    "img": "/images/catalog/pascual_toso_gran_syrah_750_ml.jpg",
+    "techsheets": [
+      "/fichas/FT-PASCUAL TOSO GRAN-SYRAH - 2023.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/FT-PASCUAL TOSO GRAN-SYRAH - 2023.pdf"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
+    "name": "PASCUAL TOSO GRAN MALBEC 750 ML",
+    "desc": "Excelente representante de su denominación de origen y terroir.",
+    "link": "#",
+    "img": "/images/catalog/pascual_toso_gran_malbec_750_ml.jpg",
+    "techsheets": [
+      "/fichas/FT-PASCUAL TOSO GRAN-MALBEC-2022.pdf"
+    ],
+    "type": "Vino Tinto",
+    "techsheet": "/fichas/FT-PASCUAL TOSO GRAN-MALBEC-2022.pdf"
+  },
+  {
+    "badge": "ARG",
+    "country": "Mendoza",
     "name": "DON APARO CABERNET SAUVIGNON 750 ML",
     "type": "Vino Tinto",
     "techsheet": "/fichas/DON APARO CABERNET SAUVIGNON 2024.pdf",
