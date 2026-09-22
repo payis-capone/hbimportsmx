@@ -42,3 +42,6 @@ next-env.d.ts
 
 .vercel
 .env*.local
+
+# assets fuente pesados (regla de Git workflow en CLAUDE.md)
+/Rebranding/
