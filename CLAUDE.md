@@ -1,7 +1,10 @@
 @AGENTS.md
 
 ## Git workflow
-- Después de completar cada tarea o fase (no cada archivo), crea un commit con mensaje descriptivo en formato convencional (feat:, fix:, chore:, style:, docs:).
-- Haz push a la rama principal al cierre de cada bloque de trabajo, siempre ANTES de cualquier deploy a producción — nunca debe haber código en producción que no esté en GitHub.
-- Nunca dejes trabajo sin commitear al terminar una sesión: si quedó algo a medias, commitea con prefijo "wip:".
-- No hagas commit de: archivos .env*, carpetas de assets fuente pesados (como Rebranding/), node_modules, ni credenciales de ningún tipo — verifica el .gitignore si tienes duda.
+- **Features nuevas**: SIEMPRE en una rama propia con nombre descriptivo (`feat/nombre-del-feature`). Commits frecuentes dentro de la rama con mensajes convencionales (feat:, fix:, chore:, style:).
+- Al terminar la feature (build limpio + verificada): merge a la rama principal y push. Después del merge, elimina la rama.
+- Si el proyecto está en Vercel, aprovecha que la rama genera un preview deploy: dame la URL del preview antes del merge cuando el cambio sea visual o afecte algo que genera leads/ventas.
+- **Fixes menores, ajustes de contenido y chores**: pueden ir directo a la rama principal.
+- Push a la rama principal SIEMPRE antes de cualquier deploy a producción — nunca debe haber código en producción que no esté en GitHub.
+- Nunca dejes trabajo sin commitear al cerrar una sesión: si quedó a medias, commit con prefijo "wip:" en su rama.
+- Nunca commitees: archivos .env*, assets fuente pesados (ej. Rebranding/), node_modules, ni credenciales. Verifica el .gitignore ante la duda.
