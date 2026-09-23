@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Serif, Manrope, Mulish } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const notoSerif = Noto_Serif({
@@ -97,6 +98,10 @@ export default function RootLayout({
       <body className="font-body bg-background text-on-surface selection:bg-primary/20 selection:text-primary min-h-screen flex flex-col">
         {children}
       </body>
+      {/* GA4 solo en builds de producción (los eventos como ficha_download salen de app/analytics.ts) */}
+      {process.env.NODE_ENV === "production" && process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }
